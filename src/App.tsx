@@ -1,14 +1,14 @@
 import Hompage from "./pages/Normal.tsx"
 import Terminal from "./pages/Terminal.tsx"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Hompage/>} />
+        <Route path="/clasic" element={<Hompage/>} />
         <Route path="/term" element={<Terminal/>} />
+        <Route path="*" element={<Navigate to="/clasic" replace />} />
       </Routes>
     </BrowserRouter>
   )
