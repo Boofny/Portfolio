@@ -1,5 +1,14 @@
 import { useState } from "react"
 
+// COLOR LIST 
+// RED          #e06c75	
+// YELLOW       #e5c07b	
+// GREEN        #98c379	
+// CYAN         #56b6c2	
+// BLUE         #61afef
+// GREY         #181818
+
+
 function Home() { // comps
   return <h2>Home content</h2>
 }
@@ -18,20 +27,20 @@ function Normal() {
   const [activeTab, setActiveTab] = useState<Tab>("home")
 
   return (
-
+    <div className="flex justify-center items-center flex-col">
       <div className="flex justify-center items-center h-screen flex-col">
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex justify-center items-center gap-2 text-white">
           <button onClick={() => setActiveTab("home")}>Home</button>
           <button onClick={() => setActiveTab("profile")}>Profile</button>
           <button onClick={() => setActiveTab("settings")}>Settings</button>
         </div>
-
         <div className="flex justify-center items-center gap-2 text-red-500">
           {activeTab === "home" && <Home />}
           {activeTab === "profile" && <Profile />}
           {activeTab === "settings" && <Settings />}
         </div>
       </div>
+    </div>
   )
 }
 

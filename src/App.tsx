@@ -4,13 +4,15 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/clasic" element={<Hompage/>} />
-        <Route path="/term" element={<Terminal/>} />
-        <Route path="*" element={<Navigate to="/clasic" replace />} />
-      </Routes>
-    </BrowserRouter>
+    <body className="bg-[#181818]">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/clasic" element={<Hompage/>} />
+          <Route path="/term" element={<Terminal/>} />
+          <Route path="*" element={<Navigate to="/clasic" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </body>
   )
 }
 
