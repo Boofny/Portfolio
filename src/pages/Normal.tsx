@@ -1,5 +1,6 @@
 import Header from "../components/Header.tsx"
 import HeaderPicture from "../components/HeaderPicture.tsx"
+import About from "../components/About.tsx"
 
 // COLOR LIST 
 // RED          #e06c75	
@@ -52,8 +53,11 @@ function Normal(){
   return(
     <div>
       <Header></Header>
-      <main className="pt-15">
-        <HeaderPicture></HeaderPicture>
+      <main className="pt-15 border-white border">
+        <div className="flex justify-center items-center">
+          <HeaderPicture></HeaderPicture>
+          <About></About>
+        </div>
       </main>
     </div>
   )

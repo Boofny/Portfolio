@@ -23,7 +23,7 @@ function Header(){
 
         <p className="relative w-max font-header text-2xl opacity-70
         before:absolute before:inset-0 before:animate-typewriter before:bg-[#141414] text-OneYellow
-        after:absolute after:inset-0 after:w-0 after:content-['█'] after:animate-caret after:bg-OneYellow">Brandon Romero
+        after:absolute after:inset-0 after:w-[0.75em] after:animate-caret after:bg-OneYellow">Brandon Romero
         </p>
         {/* <p className="text-[#e5c07b] font-mono text-2xl animate-caret">█</p> */}
 

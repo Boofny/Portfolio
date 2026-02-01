@@ -1,6 +1,6 @@
 function HeaderPicture(){
   return(
-    <div className="flex flex-col mt-15 ml-15 w-50 h-70">
+    <div className="flex flex-col m-15 w-50 h-70">
       <div className="w-50 h-50 border-4 border-OneBlue rounded">
         <img className="w-full h-full" src="https://media.tenor.com/oUidUwmb3YIAAAAe/cat.png" alt="placeholder" />
       </div>
