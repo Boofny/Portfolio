@@ -19,15 +19,19 @@ function Header(){
       </button>
 
       <div className="left-50 fixed w-100 h-15 flex items-center justify-center flex-row">
-        <p className="text-[#e5c07b] font-mono text-3xl">Brandon Romero</p>
+        {/* <p className="font-header text-[#e5c07b] text-2xl opacity-70">Brandon Romero</p> */}
 
-        <p className="text-[#e5c07b] font-mono text-2xl animate-blink">█</p>
+        <p className="relative w-max font-header text-2xl opacity-70
+        before:absolute before:inset-0 before:animate-typewriter before:bg-[#141414] text-[#e5c07b]
+        after:absolute after:inset-0 after:w-0 after:content-['█'] after:animate-caret after:bg-[#e5c07b]">Brandon Romero
+        </p>
+        {/* <p className="text-[#e5c07b] font-mono text-2xl animate-caret">█</p> */}
 
       </div>
-      <div className="fixed right-0 w-150 h-15 flex justify-center items-center rounded font-bold p-1 gap-x-20">
-        <button className=" hover:text-white text-[#98c379] text-2xl font-mono">About</button>
-        <button className=" hover:text-white text-[#98c379] text-2xl font-mono">Projects</button>
-        <button className=" hover:text-white text-[#98c379] text-2xl font-mono">Experience</button>
+      <div className="fixed right-0 w-150 h-15 flex justify-center items-center rounded font-semibold p-1 gap-x-20">
+        <button className=" hover:text-white text-[#98c379] text-1xl font-hack">About</button>
+        <button className=" hover:text-white text-[#98c379] text-1xl font-hack">Projects</button>
+        <button className=" hover:text-white text-[#98c379] text-1xl font-hack">Experience</button>
       </div>
     </div>
   )

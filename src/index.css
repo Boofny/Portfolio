@@ -1,16 +1,43 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sixtyfour&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sixtyfour&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sixtyfour&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
 
+
 @theme {
-  --animate-blink: blink 0.6s ease-in-out infinite;
-  @keyframes blink{
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-    }
+  --font-header: "Sixtyfour", mono;
+  --font-display: "JetBrains Mono", mono;
+  --font-hack: "Source Code Pro", mono;
+}
+
+
+@theme {
+  --animate-typewriter: typewriter 2s steps(14) forwards;
+  --animate-caret: typewriter 2s steps(14) forwards,
+                   blink 1s steps(14) infinite 2s;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink{
+  0% {
+    opacity: 0;
+  }
+  0.1% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  50.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }

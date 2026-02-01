@@ -7,9 +7,9 @@ function App() {
     <body className="bg-[#181818]">
       <BrowserRouter>
         <Routes>
-          <Route path="/clasic" element={<Hompage/>} />
+          <Route path="/classic" element={<Hompage/>} />
           <Route path="/term" element={<Terminal/>} />
-          <Route path="*" element={<Navigate to="/clasic" replace />} />
+          <Route path="*" element={<Navigate to="/classic" replace />} />
         </Routes>
       </BrowserRouter>
     </body>
