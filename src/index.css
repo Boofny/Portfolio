@@ -4,6 +4,17 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sixtyfour&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
 
+body{
+  background-color: #181818;
+}
+/* // COLOR LIST  */
+/* // RED          #e06c75	 */
+/* // YELLOW       #e5c07b	 */
+/* // GREEN        #98c379	 */
+/* // CYAN         #56b6c2	 */
+/* // BLUE         #61afef */
+/* // GREY         #181818 */
+/* // WHITE        #CCCCCC */
 
 @theme {
   --font-header: "Sixtyfour", mono;
@@ -40,4 +51,14 @@
   100% {
     opacity: 0;
   }
+}
+
+@theme{
+  --color-OneRed: #e06c75;
+  --color-OneYellow: #e5c07b;
+  --color-OneGreen: #98c379;
+  --color-OneCyan: #56b6c2;
+  --color-OneBlue: #61afef;
+  --color-OneGrey: #181818;
+  --color-OneWhite: #CCCCCC
 }

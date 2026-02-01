@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <body className="bg-[#181818]">
+    <div className="w-screen h-screen border-green-400">
       <BrowserRouter>
         <Routes>
           <Route path="/classic" element={<Hompage/>} />
@@ -12,7 +12,7 @@ function App() {
           <Route path="*" element={<Navigate to="/classic" replace />} />
         </Routes>
       </BrowserRouter>
-    </body>
+    </div>
   )
 }
 

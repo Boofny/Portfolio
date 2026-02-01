@@ -1,5 +1,5 @@
-import { useState } from "react"
 import Header from "../components/Header.tsx"
+import HeaderPicture from "../components/HeaderPicture.tsx"
 
 // COLOR LIST 
 // RED          #e06c75	
@@ -52,6 +52,9 @@ function Normal(){
   return(
     <div>
       <Header></Header>
+      <main className="pt-15">
+        <HeaderPicture></HeaderPicture>
+      </main>
     </div>
   )
 }

@@ -2,19 +2,19 @@
 
 
 
-// COLOR LIST 
-// RED          #e06c75	
-// YELLOW       #e5c07b	
-// GREEN        #98c379	
-// CYAN         #56b6c2	
-// BLUE         #61afef
-// GREY         #181818
-// WHITE        #CCCCCC
 
+
+
+
+
+
+
+
+// for now the button do nothing but will change in the near future 
 function Header(){
   return (
-    <div className="bg-[#131313] fixed top-0 w-screen h-15 flex justify-center items-center gap-y-0 border-b-2 border-[#98c379]">
-      <button className="text-[#98c379] text-4xl fixed left-0 border-3 border-[#98c379] w-15 h-15 flex justify-center items-center rounded font-bold p-1 hover:bg-[#98c379] hover:text-black ani">
+    <div className="bg-[#131313] fixed top-0 w-screen h-15 flex justify-center items-center gap-y-0 border-b-2 border-OneGreen">
+      <button className="ease-in-out duration-300 text-OneGreen text-4xl fixed left-0 border-3 border-OneGreen w-15 h-15 flex justify-center items-center rounded font-bold p-1 hover:bg-OneGreen hover:text-black ani font-display">
         {">_"}
       </button>
 
@@ -22,16 +22,16 @@ function Header(){
         {/* <p className="font-header text-[#e5c07b] text-2xl opacity-70">Brandon Romero</p> */}
 
         <p className="relative w-max font-header text-2xl opacity-70
-        before:absolute before:inset-0 before:animate-typewriter before:bg-[#141414] text-[#e5c07b]
-        after:absolute after:inset-0 after:w-0 after:content-['█'] after:animate-caret after:bg-[#e5c07b]">Brandon Romero
+        before:absolute before:inset-0 before:animate-typewriter before:bg-[#141414] text-OneYellow
+        after:absolute after:inset-0 after:w-0 after:content-['█'] after:animate-caret after:bg-OneYellow">Brandon Romero
         </p>
         {/* <p className="text-[#e5c07b] font-mono text-2xl animate-caret">█</p> */}
 
       </div>
-      <div className="fixed right-0 w-150 h-15 flex justify-center items-center rounded font-semibold p-1 gap-x-20">
-        <button className=" hover:text-white text-[#98c379] text-1xl font-hack">About</button>
-        <button className=" hover:text-white text-[#98c379] text-1xl font-hack">Projects</button>
-        <button className=" hover:text-white text-[#98c379] text-1xl font-hack">Experience</button>
+      <div className="fixed right-0 w-150 h-15 flex justify-center items-center rounded wp-1 gap-x-20 font-header text-xs">
+        <button className=" duration-300 ease-in-out hover:text-white text-OneGreen">About</button>
+        <button className=" duration-300 ease-in-out hover:text-white text-OneGreen">Projects</button>
+        <button className=" duration-300 ease-in-out hover:text-white text-OneGreen">Experience</button>
       </div>
     </div>
   )
