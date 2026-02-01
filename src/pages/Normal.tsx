@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Header from "../components/Header.tsx"
 
 // COLOR LIST 
 // RED          #e06c75	
@@ -9,39 +10,50 @@ import { useState } from "react"
 // GREY         #181818
 
 
-function Home() { // comps
-  return <h2>Home content</h2>
-}
+// function Home() { // comps
+//   return <h2>Home content</h2>
+// }
+//
+// function Profile() {
+//   return <h2>Profile content</h2>
+// }
+//
+// function Settings() {
+//   return <h2>Settings content</h2>
+// }
+//
+// type Tab = "home" | "profile" | "settings"
+//
+// function Normal() {
+//   const [activeTab, setActiveTab] = useState<Tab>("home")
+//
+//   return (
+//     <div className="flex justify-center items-center flex-col">
+//     <Header></Header>
+//       <div className="flex justify-center items-center h-screen flex-col">
+//         <div className="flex justify-center items-center gap-2 text-white">
+//           <button onClick={() => setActiveTab("home")}>Home</button>
+//           <button onClick={() => setActiveTab("profile")}>Profile</button>
+//           <button onClick={() => setActiveTab("settings")}>Settings</button>
+//         </div>
+//         <div className="flex justify-center items-center gap-2 text-red-500">
+//           {activeTab === "home" && <Home />}
+//           {activeTab === "profile" && <Profile />}
+//           {activeTab === "settings" && <Settings />}
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+//
+// export default Normal;
 
-function Profile() {
-  return <h2>Profile content</h2>
-}
-
-function Settings() {
-  return <h2>Settings content</h2>
-}
-
-type Tab = "home" | "profile" | "settings"
-
-function Normal() {
-  const [activeTab, setActiveTab] = useState<Tab>("home")
-
-  return (
-    <div className="flex justify-center items-center flex-col">
-      <div className="flex justify-center items-center h-screen flex-col">
-        <div className="flex justify-center items-center gap-2 text-white">
-          <button onClick={() => setActiveTab("home")}>Home</button>
-          <button onClick={() => setActiveTab("profile")}>Profile</button>
-          <button onClick={() => setActiveTab("settings")}>Settings</button>
-        </div>
-        <div className="flex justify-center items-center gap-2 text-red-500">
-          {activeTab === "home" && <Home />}
-          {activeTab === "profile" && <Profile />}
-          {activeTab === "settings" && <Settings />}
-        </div>
-      </div>
+function Normal(){
+  return(
+    <div>
+      <Header></Header>
     </div>
   )
 }
 
-export default Normal;
+export default Normal

@@ -9,21 +9,26 @@
 // CYAN         #56b6c2	
 // BLUE         #61afef
 // GREY         #181818
+// WHITE        #CCCCCC
 
 function Header(){
   return (
-    <div className="fixed top-0 w-screen h-15 bg-[#98c379] flex justify-center items-center gap-y-0 border-2 border-[#98c379]">
-      <div className="bg-[#181818] w-15 h-14 border-x-2 border-[#98c379] flex justify-center items-center
-      text-[#98c379] font-bold text-4xl font-sans hover:bg-[#98c379] hover:text-[#131313] rounded-sm left-0 fixed">{`>_`}</div>
+    <div className="bg-[#131313] fixed top-0 w-screen h-15 flex justify-center items-center gap-y-0 border-b-2 border-[#98c379]">
+      <button className="text-[#98c379] text-4xl fixed left-0 border-3 border-[#98c379] w-15 h-15 flex justify-center items-center rounded font-bold p-1 hover:bg-[#98c379] hover:text-black ani">
+        {">_"}
+      </button>
 
-      <div className="bg-[#181818] w-30 h-full border-x-2 border-[#98c379] flex justify-center items-center 
-      text-[#98c379] font-bold text-lg font-sans hover:bg-[#98c379] hover:text-[#131313] rounded-sm">TBD</div>
+      <div className="left-50 fixed w-100 h-15 flex items-center justify-center flex-row">
+        <p className="text-[#e5c07b] font-mono text-3xl">Brandon Romero</p>
 
-      <button className="bg-[#181818] w-30 h-full border-x-2 border-[#98c379] flex justify-center items-center 
-      text-[#98c379] font-bold text-lg font-sans hover:bg-[#98c379] hover:text-[#131313] rounded-sm">TBD</button>
-      {/* <div className="w-40 h-full border-x-3 border-[#98c379] flex justify-center items-center text-[#98c379] font-bold text-lg font-sans hover:bg-[#98c379] hover:text-[#131313]">TBD</div> */}
-      {/* <div className="w-40 h-full border-x-3 border-[#98c379] flex justify-center items-center text-[#98c379] font-bold text-lg font-sans hover:bg-[#98c379] hover:text-[#131313]">TBD</div> */}
-      {/* <div className="w-40 h-full border-x-3 border-[#98c379] flex justify-center items-center text-[#98c379] font-bold text-lg font-sans hover:bg-[#98c379] hover:text-[#131313]">Contact Me</div> */}
+        <p className="text-[#e5c07b] font-mono text-2xl animate-blink">█</p>
+
+      </div>
+      <div className="fixed right-0 w-150 h-15 flex justify-center items-center rounded font-bold p-1 gap-x-20">
+        <button className=" hover:text-white text-[#98c379] text-2xl font-mono">About</button>
+        <button className=" hover:text-white text-[#98c379] text-2xl font-mono">Projects</button>
+        <button className=" hover:text-white text-[#98c379] text-2xl font-mono">Experience</button>
+      </div>
     </div>
   )
 }
