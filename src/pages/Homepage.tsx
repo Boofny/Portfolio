@@ -49,7 +49,7 @@ import About from "../components/About.tsx"
 //
 // export default Normal;
 
-function Normal(){
+function Homepage(){
   return(
     <div>
       <Header></Header>
@@ -63,4 +63,4 @@ function Normal(){
   )
 }
 
-export default Normal
+export default Homepage
