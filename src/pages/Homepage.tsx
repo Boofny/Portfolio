@@ -1,6 +1,7 @@
 import Header from "../components/Header.tsx"
 import HeaderPicture from "../components/HeaderPicture.tsx"
 import About from "../components/About.tsx"
+import Projects from "../components/Projects.tsx"
 
 // COLOR LIST 
 // RED          #e06c75	
@@ -51,14 +52,15 @@ import About from "../components/About.tsx"
 
 function Homepage(){
   return(
-    <div>
+    <div className="m-0">
       <Header></Header>
-      <main className="pt-15 border-white border">
+      <main className="pt-15">
         <div className="flex justify-center items-center">
           <HeaderPicture></HeaderPicture>
           <About></About>
         </div>
       </main>
+      <Projects></Projects>
     </div>
   )
 }
