@@ -2,6 +2,7 @@ import Header from "../components/Header.tsx"
 import HeaderPicture from "../components/HeaderPicture.tsx"
 import About from "../components/About.tsx"
 import Projects from "../components/Projects.tsx"
+import Experience from "../components/Experience.tsx"
 
 // COLOR LIST 
 // RED          #e06c75	
@@ -60,7 +61,12 @@ function Homepage(){
           <About></About>
         </div>
       </main>
-      <Projects></Projects>
+      <div>
+        <Projects></Projects>
+      </div>
+      <div>
+        <Experience></Experience>
+      </div>
     </div>
   )
 }

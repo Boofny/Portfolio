@@ -5,7 +5,7 @@
 @import "tailwindcss";
 
 body{
-  background-color: #181818;
+  background-color: #1e1e1e;
 }
 /* // COLOR LIST  */
 /* // RED          #e06c75	 */
@@ -59,7 +59,8 @@ body{
   --color-OneGreen: #98c379;
   --color-OneCyan: #56b6c2;
   --color-OneBlue: #61afef;
-  --color-OneGrey: #181818;
+  --color-OneDarkGray : #131313;
+  --color-OneLightGray: #1e1e1e;
   --color-OneWhite: #CCCCCC;
   --color-OneMagenta: #C678DD;
 }
