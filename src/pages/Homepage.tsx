@@ -6,9 +6,9 @@ import Experience from "../components/Experience.tsx"
 
 function Homepage(){
   return(
-    <div className="m-0">
+    <div className="m-0 flex flex-col ">
       <Header></Header>
-      <main className="pt-15">
+      <main className="pt-15 border w-full flex justify-center items-center">
         <div className="flex justify-center items-center">
           <HeaderPicture></HeaderPicture>
           <About></About>

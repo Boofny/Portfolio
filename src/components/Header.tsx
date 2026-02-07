@@ -14,10 +14,10 @@ function Header(){
         </p>
 
       </div>
-      <div className="fixed right-0 w-150 h-15 flex justify-center items-center rounded wp-1 gap-x-20 font-header text-xs">
-        <button className=" duration-300 ease-in-out hover:text-white text-OneGreen hover:scale-110">About</button>
-        <button className=" duration-300 ease-in-out hover:text-white text-OneGreen hover:scale-110">Projects</button>
-        <button className=" duration-300 ease-in-out hover:text-white text-OneGreen hover:scale-110">Experience</button>
+      <div className="fixed right-0 w-150 h-15 flex justify-center items-center rounded wp-1 gap-0 font-header text-xs">
+        <button className=" h-full w-full duration-300 ease-in-out hover:text-OneDarkGray text-OneGreen hover:bg-OneGreen">About</button>
+        <button className=" w-full h-full duration-300 ease-in-out hover:text-OneDarkGray text-OneGreen hover:bg-OneGreen">Projects</button>
+        <button className=" w-full h-full duration-300 ease-in-out hover:text-OneDarkGray text-OneGreen hover:bg-OneGreen">Experience</button>
       </div>
     </div>
   )
