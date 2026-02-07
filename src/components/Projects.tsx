@@ -1,15 +1,15 @@
 import { useState } from "react"
 
 function GoLive() { // comps
-  return <h2>Home content</h2>
+  return <h2>Golive</h2>
 }
 
 function AsciiIt() {
-  return <h2>Profile content</h2>
+  return <h2>AsciiIt</h2>
 }
 
 function UrlShorter() {
-  return <h2>Settings content</h2>
+  return <h2>URLSHORTNER</h2>
 }
 
 type Tab = "golive" | "asciiIt" | "urlshorter"

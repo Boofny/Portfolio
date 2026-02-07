@@ -15,9 +15,9 @@ function Header(){
 
       </div>
       <div className="fixed right-0 w-150 h-15 flex justify-center items-center rounded wp-1 gap-0 font-header text-xs">
-        <button className=" h-full w-full duration-300 ease-in-out hover:text-OneDarkGray text-OneGreen hover:bg-OneGreen">About</button>
-        <button className=" w-full h-full duration-300 ease-in-out hover:text-OneDarkGray text-OneGreen hover:bg-OneGreen">Projects</button>
-        <button className=" w-full h-full duration-300 ease-in-out hover:text-OneDarkGray text-OneGreen hover:bg-OneGreen">Experience</button>
+        <button className=" h-full w-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen font-bold">About</button>
+        <button className=" w-full h-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen font-bold">Projects</button>
+        <button className=" w-full h-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen font-bold">Experience</button>
       </div>
     </div>
   )
