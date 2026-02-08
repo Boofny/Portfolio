@@ -1,7 +1,7 @@
 
 export function GoLive() { // comps
   return(
-    <div className="w-full h-full bg-OneCyan">
+    <div className="w-full h-full bg-OneDarkGray">
       <p>Hello world</p>
     </div>
   )
