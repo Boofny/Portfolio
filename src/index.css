@@ -24,9 +24,9 @@ body{
 
 
 @theme {
-  --animate-typewriter: typewriter 2s steps(14) forwards;
-  --animate-caret: typewriter 2s steps(14) forwards,
-                   blink 0.8s steps(14) infinite 2s;
+  --animate-typewriter: typewriter 1.5s steps(14) forwards;
+  --animate-caret: typewriter 1.5s steps(14) forwards,
+                   blink 0.8s steps(14) infinite 1.5s;
 }
 
 @keyframes typewriter {

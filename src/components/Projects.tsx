@@ -1,52 +1,7 @@
 import { useState } from "react"
+import { GoLive, AsciiIt, UrlShorter}from "./ProjectComps/ProjectComps.tsx"
+import { TechStackGoLive, TechStackAsciiIt, TechStackUrlShorter}from "./ProjectComps/ProjectStack.tsx"
 
-function GoLive() { // comps
-  return(
-    <div className="w-full h-full bg-OneCyan">
-      <p>Hello world</p>
-    </div>
-  )
-}
-
-function AsciiIt() {
-  return(
-    <div className="w-full h-full bg-OneYellow">
-      <p>Hello world</p>
-    </div>
-  )
-}
-
-function UrlShorter() {
-  return(
-    <div className="w-full h-full bg-OneRed">
-      <p>Hello world</p>
-    </div>
-  )
-}
-
-function TechStackGoLive() { // comps
-  return(
-    <div className="w-full h-full bg-OneCyan">
-      <p>leee</p>
-    </div>
-  )
-}
-
-function TechStackAsciiIt() {
-  return(
-    <div className="w-full h-full bg-OneYellow">
-      <p>leck</p>
-    </div>
-  )
-}
-
-function TechStackUrlShorter() {
-  return(
-    <div className="w-full h-full bg-OneRed">
-      <p>tech</p>
-    </div>
-  )
-}
 type Tab = "golive" | "asciiIt" | "urlshorter"
 
 function Projects(){
@@ -55,7 +10,6 @@ function Projects(){
 
   const handleClickOption = (tab: Tab) => {
     setActiveTab(tab);
-    // setColor(activeTab)
   };
 
   const getButtonClasses = (tab: Tab) => 
