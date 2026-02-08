@@ -9,12 +9,12 @@ function Header(){
       <div className="left-50 fixed w-100 h-15 flex items-center justify-center flex-row">
 
         <p className="relative w-max font-header text-2xl opacity-70
-        before:absolute before:inset-0 before:animate-typewriter before:bg-[#141414] text-OneYellow
+        before:absolute before:inset-0 before:animate-typewriter before:bg-OneDarkGray text-OneYellow
         after:absolute after:inset-0 after:w-[0.75em] after:animate-caret after:bg-OneYellow">Brandon Romero
         </p>
 
       </div>
-      <div className="fixed right-0 w-150 h-15 flex justify-center items-center rounded wp-1 gap-0 font-header text-xs">
+      <div className="fixed right-0 w-130 h-15 flex justify-center items-center rounded wp-1 gap-0 font-header text-xs">
         <button className=" h-full w-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen font-bold">About</button>
         <button className=" w-full h-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen font-bold">Projects</button>
         <button className=" w-full h-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen font-bold">Experience</button>

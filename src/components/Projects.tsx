@@ -1,40 +1,74 @@
 import { useState } from "react"
 
 function GoLive() { // comps
-  return <h2>Golive</h2>
+  return(
+    <div className="w-full h-full bg-OneCyan">
+      <p>Hello world</p>
+    </div>
+  )
 }
 
 function AsciiIt() {
-  return <h2>AsciiIt</h2>
+  return(
+    <div className="w-full h-full bg-OneYellow">
+      <p>Hello world</p>
+    </div>
+  )
 }
 
 function UrlShorter() {
-  return <h2>URLSHORTNER</h2>
+  return(
+    <div className="w-full h-full bg-OneRed">
+      <p>Hello world</p>
+    </div>
+  )
 }
 
+function TechStackGoLive() { // comps
+  return(
+    <div className="w-full h-full bg-OneCyan">
+      <p>leee</p>
+    </div>
+  )
+}
+
+function TechStackAsciiIt() {
+  return(
+    <div className="w-full h-full bg-OneYellow">
+      <p>leck</p>
+    </div>
+  )
+}
+
+function TechStackUrlShorter() {
+  return(
+    <div className="w-full h-full bg-OneRed">
+      <p>tech</p>
+    </div>
+  )
+}
 type Tab = "golive" | "asciiIt" | "urlshorter"
 
 function Projects(){
   const [activeTab, setActiveTab] = useState<Tab>("golive")
+  // const [color, setColor] = useState<String>("")
 
   const handleClickOption = (tab: Tab) => {
     setActiveTab(tab);
+    // setColor(activeTab)
   };
+
   const getButtonClasses = (tab: Tab) => 
-    activeTab === tab
-      ? "blue-500"
-      : "red-500";
+    activeTab === tab ? "bg-OneGreen text-black" : "bg-OneDarkGray";
 
   return(
     <div className="w-full h-full flex justify-center items-top pl-25 pr-25 pt-1 gap-20 ">
-      <div className="w-full h-125 border border-white flex justify-center items-center flex-col bg-OneDarkGray">
-        <div className="w-full h-15 flex justify-center items-center text-white">
+      <div className="w-full h-125 flex justify-center items-center flex-col rounded">
+        <div className="w-full h-15 flex justify-center items-center text-white font-bold font-hack text-lg rounded">
         {/* Should be on click the color will change for the tab making it seem like the tab is connected to the content and ofc add hover effects and stuff*/}
-          <button className={`border border-white w-full h-full bg-${getButtonClasses("golive")}`} onClick={() => handleClickOption("golive")}>Go Live</button> 
-          <button className={`border border-white w-full h-full bg-${getButtonClasses("asciiIt")}`} onClick={() => handleClickOption("asciiIt")}>Ascii It</button> 
-          <button className={`border border-white w-full h-full bg-${getButtonClasses("urlshorter")}`} onClick={() => handleClickOption("urlshorter")}>URL Shortner</button> 
-          {/* <button className="border border-white w-full h-full" onClick={() => setActiveTab("asciiIt")}>Ascii It</button>  */}
-          {/* <button className="border border-white w-full h-full" onClick={() => setActiveTab("urlshorter")}>URL Shortner</button>  */}
+          <button className={`w-full h-full ${getButtonClasses("golive")}`} onClick={() => handleClickOption("golive")}>Go Live</button> 
+          <button className={`w-full h-full ${getButtonClasses("asciiIt")} border-x`} onClick={() => handleClickOption("asciiIt")}>Ascii It</button> 
+          <button className={`w-full h-full ${getButtonClasses("urlshorter")}`} onClick={() => handleClickOption("urlshorter")}>URL Shortner</button> 
         </div>
         <div className="w-full h-full text-white flex justify-center items-center">
            {activeTab === "golive" && <GoLive/>}
@@ -43,41 +77,12 @@ function Projects(){
         </div>
       </div>
       <div className="w-100 h-125 border border-white bg-OneDarkGray">
-        <p className="text-white">Tech stack</p>
+         {activeTab === "golive" && <TechStackGoLive/>}
+         {activeTab === "asciiIt" && <TechStackAsciiIt/>}
+         {activeTab === "urlshorter" && <TechStackUrlShorter/>}
       </div>
     </div>
   )
 }
 
 export default Projects
-
-
-// import React, { useState } from 'react';
-//
-// function ColorToggleButton() {
-//   // 1. Use useState to manage the button's active state
-//   const [isActive, setIsActive] = useState(false);
-//
-//   // 2. Define the function that updates the state on click
-//   const handleClick = () => {
-//     setIsActive(!isActive);
-//   };
-//
-//   // 3. Conditionally apply Tailwind classes
-//   // The color will be 'bg-blue-500' when active and 'bg-red-500' when inactive
-//   const buttonClasses = isActive
-//     ? 'bg-blue-500 hover:bg-blue-700'
-//     : 'bg-red-500 hover:bg-red-700';
-//
-//   return (
-//     <button
-//       onClick={handleClick}
-//       // Combine base classes with the dynamic color classes
-//       className={`p-4 text-white font-bold rounded shadow-lg transition duration-150 ease-in-out ${buttonClasses}`}
-//     >
-//       Click Me to Change Color
-//     </button>
-//   );
-// }
-//
-// export default ColorToggleButton;
