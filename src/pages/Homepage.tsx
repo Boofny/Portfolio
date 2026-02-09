@@ -18,6 +18,11 @@ function Homepage(){
         <Projects></Projects>
       </div>
       <div>
+        {/* <div className="flex items-center text-gray-400 text-xl font-hack font-bold"> */}
+        {/*   <div className="flex-grow border-t-4 border-OneGreen" /> */}
+        {/*   <span className="px-2 text-gray-300 ">About Me</span> */}
+        {/*   <div className="flex-grow border-t-4 border-OneGreen" /> */}
+        {/* </div> */}
         <Experience></Experience>
       </div>
     </div>
