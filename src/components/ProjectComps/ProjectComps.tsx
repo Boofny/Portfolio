@@ -2,23 +2,23 @@
 export function GoLive() { // comps
   return(
     <div className="w-full h-full bg-OneDarkGray">
-      <p>Hello world</p>
+      <p>GoLive</p>
     </div>
   )
 }
 
 export function AsciiIt() {
   return(
-    <div className="w-full h-full bg-OneYellow">
-      <p>Hello world</p>
+    <div className="w-full h-full bg-OneDarkGray">
+      <p>AsciiIt</p>
     </div>
   )
 }
 
 export function UrlShorter() {
   return(
-    <div className="w-full h-full bg-OneRed">
-      <p>Hello world</p>
+    <div className="w-full h-full bg-OneDarkGray">
+      <p>UrlShorter</p>
     </div>
   )
 }

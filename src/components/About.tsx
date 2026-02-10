@@ -2,11 +2,11 @@ import Vimer from "./vimer.tsx"
 function About(){
   return(
     <fieldset className="w-150 h-105 m-20 rounded bg-OneDarkGray border-2 border-OneGreen justify-center flex items-center flex-col">
-      <legend className="ml-10 text-OneYellow font-hack text-ms font-bold uppercase tracking-widest">About Me</legend>
+      <legend className="ml-10 text-OneYellow font-hack text-ms font-bold uppercase tracking-widest">[0]About Me</legend>
       <div className="flex flex-col w-full h-full">
         <Vimer></Vimer>
       </div>
-      <div className="h-5 text-white flex justify-center pr-125 items-center font-bold">: About me</div>
+      <div className="h-5 text-white flex justify-center pr-128 items-center "></div>
     </fieldset>
   )
 }

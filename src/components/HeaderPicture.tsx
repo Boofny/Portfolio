@@ -3,7 +3,7 @@ function HeaderPicture(){
   const deltechPic = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8xOB8LE6X-nAkmNn3_s-8h7Ac_v6fjNJr1A&s"
 
   return(
-    <div className="flex flex-col m-15 w-50 h-100 ">
+    <div className="flex flex-col m-15 w-50 h-100">
       <div className="w-50 h-50 border-2 border-OneBlue rounded">
         <img className="w-full h-full" src="https://i.pinimg.com/736x/b4/bb/b2/b4bbb2198b036fe1024571ec6b60f8b8.jpg" alt="headShot" />
       </div>
@@ -23,20 +23,18 @@ function HeaderPicture(){
           </a>
         </div>
       </div>
-      <div className="h-full w-full border border-white flex justify-center items-center flex-col">
 
+      <div className="h-full w-full border border-white flex justify-center items-center flex-col">
         <div className="w-full h-fulltext-white">
           <div className="w-13 h-full ">
             <img src={delcastlePic} alt="delcastle" />
           </div>
         </div>
-
         <div className="w-full h-full border-t border-white text-white">
           <div className="w-13 h-full">
             <img src={deltechPic} alt="deltech" />
           </div>
         </div>
-
       </div>
     </div>
   )

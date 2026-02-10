@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import {useRef, useState } from "react";
 
 const buffer = [
   "This is a fake vim editor",
@@ -13,9 +13,9 @@ export default function VimLikeEditor() {
   const [col, setCol] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    containerRef.current?.focus();
-  }, []);
+  // useEffect(() => {
+  //   containerRef.current?.focus();
+  // }, []);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     e.preventDefault();
@@ -65,7 +65,7 @@ export default function VimLikeEditor() {
                     key={charIdx}
                     className={
                       isCursor
-                        ? "bg-white text-black"
+                        ? "bg-white text-black "
                         : ""
                     }
                   >
@@ -79,9 +79,10 @@ export default function VimLikeEditor() {
       </div>
 
       {/* Status line */}
-      <div className="h-8 bg-gray-300 text-black px-3 flex items-center">
-        <span className="font-bold">NORMAL</span>
-        <span className="ml-4">
+      <div className="h-5 bg-[#2c323c] text-gray-300 flex items-center ">
+        <span className="h-full font-bold text-black bg-OneGreen px-3"> NORMAL</span>
+        <div className="flex justify-end items-center w-0 h-0 border-l-OneGreen border-[10px] border-r-0 border-y-transparent"></div>
+        <span className="ml-4 font-bold pr-4">
           row {row + 1}, col {col + 1}
         </span>
       </div>
