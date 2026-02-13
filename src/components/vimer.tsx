@@ -6,6 +6,14 @@ const buffer = [
   "No insert mode",
   "No undo",
   "Just vibes",
+  " ",
+  " ",
+  " ",
+  " ",
+  " ",
+  " ",
+  " ",
+  " ",
 ];
 
 export default function VimLikeEditor() {
