@@ -1,19 +1,19 @@
 import {useRef, useState } from "react";
 
 const buffer = [
-  "This is a fake vim editor",
+  "Hello All",
   "hjkl to move around",
   "No insert mode",
   "No undo",
-  "Just vibes",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
-  " ",
+  "Just move",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
 ];
 
 export default function VimLikeEditor() {
@@ -24,7 +24,7 @@ export default function VimLikeEditor() {
   // useEffect(() => {
   //   containerRef.current?.focus();
   // }, []);
-
+  
   const handleKeyDown = (e: React.KeyboardEvent) => {
     e.preventDefault();
 
@@ -43,6 +43,21 @@ export default function VimLikeEditor() {
         setRow(r => Math.max(0, r - 1));
         setCol(0);
         break;
+      case "G":
+        setRow(buffer.length - 1)
+        break;
+      case "g":
+        setRow(0)
+        break;
+      case "A":
+        setCol(buffer[row].length);
+        break;
+      case "I":
+        setCol(0);
+        break;
+      case "M":
+        setRow(((buffer.length / 2) + 0.5) - 1);
+        break;
     }
   };
 
@@ -56,15 +71,15 @@ export default function VimLikeEditor() {
       {/* Editor */}
       <div className="flex-1 pl-1 space-y-1">
         {buffer.map((line, lineIdx) => (
-          <div key={lineIdx} className="flex">
+          <div key={lineIdx} className={`flex ${lineIdx === row ? "bg-[#2c323c]" : ""}`}>
             {/* Line number */}
-            <span className="w-10 text-gray-400 text-right pr-4">
+            <span className={`w-10 text-gray-400 text-right pr-4 ${lineIdx === row ? "text-white font-bold pr-5" : ""}`}>
               {lineIdx + 1}
             </span>
 
             {/* Line content */}
             <span className="whitespace-pre ">
-              {line.split("").map((char, charIdx) => {
+              {[...line, " "].map((char, charIdx) => {
                 const isCursor =
                   lineIdx === row && charIdx === col;
 
@@ -73,7 +88,7 @@ export default function VimLikeEditor() {
                     key={charIdx}
                     className={
                       isCursor
-                        ? "bg-white text-black "
+                        ? "bg-white text-black"
                         : ""
                     }
                   >
@@ -88,7 +103,7 @@ export default function VimLikeEditor() {
 
       {/* Status line */}
       <div className="h-5 bg-[#2c323c] text-gray-300 flex items-center ">
-        <span className="h-full font-bold text-black bg-OneGreen px-3"> NORMAL</span>
+        <span className="h-full font-bold text-black bg-OneGreen px-3 flex items-center justify-center">NORMAL</span>
         <div className="flex justify-end items-center w-0 h-0 border-l-OneGreen border-[10px] border-r-0 border-y-transparent"></div>
         <span className="ml-4 font-bold pr-4">
           row {row + 1}, col {col + 1}
