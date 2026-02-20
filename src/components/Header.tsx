@@ -14,9 +14,9 @@ function Header(){
         </p>
 
       </div>
-      <div className="fixed right-0 w-130 h-15 flex justify-center items-center rounded wp-1 gap-0 font-header text-xs">
-        <button className=" hover:cursor-pointer h-full w-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen font-bold">About</button>
-        <button className=" hover:cursor-pointer w-full h-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen font-bold">Projects</button>
+      <div className="fixed right-0 w-130 h-15 flex justify-center items-center rounded wp-1 gap-0 font-header text-sm">
+        <button className=" hover:cursor-pointer h-full w-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen border-l font-bold">About</button>
+        <button className=" hover:cursor-pointer w-full h-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen border-x font-bold">Projects</button>
         <button className=" hover:cursor-pointer w-full h-full duration-300 ease-in-out hover:text-black text-OneGreen hover:bg-OneGreen font-bold">Experience</button>
       </div>
     </div>
@@ -24,45 +24,3 @@ function Header(){
 }
 
 export default Header
-
-// unsing buttons on the header will allow interactivity in the header like this in tabs
-// import { useState } from "react"
-// import Header from "../components/Header.tsx"
-//
-// function Home() { // comps
-//   return <h2>Home content</h2>
-// }
-//
-// function Profile() {
-//   return <h2>Profile content</h2>
-// }
-//
-// function Settings() {
-//   return <h2>Settings content</h2>
-// }
-//
-// type Tab = "home" | "profile" | "settings"
-//
-// function Normal() {
-//   const [activeTab, setActiveTab] = useState<Tab>("home")
-//
-//   return (
-//     <div className="flex justify-center items-center flex-col">
-//     <Header></Header>
-//       <div className="flex justify-center items-center h-screen flex-col">
-//         <div className="flex justify-center items-center gap-2 text-white">
-//           <button onClick={() => setActiveTab("home")}>Home</button>
-//           <button onClick={() => setActiveTab("profile")}>Profile</button>
-//           <button onClick={() => setActiveTab("settings")}>Settings</button>
-//         </div>
-//         <div className="flex justify-center items-center gap-2 text-red-500">
-//           {activeTab === "home" && <Home />}
-//           {activeTab === "profile" && <Profile />}
-//           {activeTab === "settings" && <Settings />}
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-//
-// export default Normal;

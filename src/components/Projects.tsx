@@ -18,7 +18,7 @@ function Projects(){
   return(
     <div className="w-full h-125 flex justify-center items-top pl-25 pr-25 pt-1 gap-20">
       <fieldset className="w-full h-full bg-OneDarkGray border-3 border-OneGreen justify-center flex items-center flex-col rounded">
-        <legend className="ml-10 text-OneYellow font-hack text-ms font-bold uppercase tracking-widest">[1]Projects</legend>
+        <legend className="ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">[1]Projects</legend>
           <div className="flex flex-col w-full h-full">
             <div className="w-full h-125 flex justify-center items-center flex-col mt-2">
               <div className="w-full h-full text-white flex justify-center items-center">
@@ -38,7 +38,7 @@ function Projects(){
 
       <div className="w-115 h-full">
         <fieldset className="w-full h-full rounded bg-OneDarkGray border-3 border-OneGreen justify-center flex items-center flex-col top-0 pt-0">
-          <legend className="ml-10 text-OneYellow font-hack text-ms font-bold uppercase tracking-widest">[2]Tech Stack</legend>
+          <legend className="ml-10 text-OneYellow font-hack text-lg font-bold uppercase tracking-widest">[2]Tech Stack</legend>
           <div className="flex flex-col w-full h-full">
              {activeTab === "golive" && <TechStackGoLive/>}
              {activeTab === "asciiIt" && <TechStackAsciiIt/>}

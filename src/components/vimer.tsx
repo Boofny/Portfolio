@@ -1,4 +1,4 @@
-import {useRef, useState } from "react";
+import {useRef, useState, useEffect} from "react";
 
 const buffer = [
   "Hello All",
@@ -21,9 +21,9 @@ export default function VimLikeEditor() {
   const [col, setCol] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   containerRef.current?.focus();
-  // }, []);
+  useEffect(() => {
+    containerRef.current?.focus();
+  }, []);
   
   const handleKeyDown = (e: React.KeyboardEvent) => {
     e.preventDefault();
@@ -55,8 +55,8 @@ export default function VimLikeEditor() {
       case "I":
         setCol(0);
         break;
-      case "M":
-        setRow(((buffer.length / 2) + 0.5) - 1);
+      case "q":
+        containerRef.current?.blur();
         break;
     }
   };
@@ -73,12 +73,12 @@ export default function VimLikeEditor() {
         {buffer.map((line, lineIdx) => (
           <div key={lineIdx} className={`flex ${lineIdx === row ? "bg-[#2c323c]" : ""}`}>
             {/* Line number */}
-            <span className={`w-10 text-gray-400 text-right pr-4 ${lineIdx === row ? "text-white font-bold pr-5" : ""}`}>
-              {lineIdx + 1}
+            <span className={`w-10 text-gray-400 text-right pr-4 ${lineIdx === row ? "text-white font-bold pr-6" : ""}`}>
+              {lineIdx === row ? lineIdx + 1 : Math.abs(lineIdx - row)}
             </span>
 
             {/* Line content */}
-            <span className="whitespace-pre ">
+            <span className="whitespace-pre">
               {[...line, " "].map((char, charIdx) => {
                 const isCursor =
                   lineIdx === row && charIdx === col;
