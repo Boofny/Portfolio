@@ -1,8 +1,10 @@
-import {useRef, useState, useEffect} from "react";
+import {useRef, useState} from "react";
 
 const buffer = [
   "Hello All",
   "hjkl to move around",
+  "",
+  "",
   "",
   "",
   "",
@@ -18,9 +20,9 @@ export default function VimLikeEditor() {
   const [col, setCol] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    containerRef.current?.focus();
-  }, []);
+  // useEffect(() => {
+  //   containerRef.current?.focus();
+  // }, []);
   
   const handleKeyDown = (e: React.KeyboardEvent) => {
     e.preventDefault();
@@ -59,13 +61,29 @@ export default function VimLikeEditor() {
       case "w":
         setCol(c => {
           const line = buffer[row];
+          // find the next white space 
           const nextSpace = line.slice(c).search(/\s/);
-          if (nextSpace === -1) {
+
+          // only move cursor if the space after the word is -1 AND if the length of the buffer is not emty aka has words
+          if (nextSpace === -1 && buffer[row].length !== 0) { 
             return line.length - 1;
           }
           return Math.min(c + nextSpace + 1, line.length);
         })
         break;
+      case "b": // up next
+        // setCol(c => {
+        //   const line = buffer[row];
+        //   // find the next white space 
+        //   const nextSpace = line.slice(c).search(/\s/);
+        //
+        //   // only move cursor if the space after the word is -1 AND if the length of the buffer is not emty aka has words
+        //   if (nextSpace === -1 && buffer[row].length !== 0) { 
+        //     return line.length - 1;
+        //   }
+        //   return Math.min(c + nextSpace + 1, line.length);
+        // })
+        // break;
     }
   };
 
