@@ -3,9 +3,6 @@ import {useRef, useState, useEffect} from "react";
 const buffer = [
   "Hello All",
   "hjkl to move around",
-  "No insert mode",
-  "No undo",
-  "Just move",
   "",
   "",
   "",
@@ -36,6 +33,7 @@ export default function VimLikeEditor() {
         setCol(c => Math.min(buffer[row].length, c + 1));
         break;
       case "j":
+        // console.log(buffer[0][0])
         setRow(r => Math.min(buffer.length - 1, r + 1));
         setCol(0);
         break;
@@ -57,6 +55,16 @@ export default function VimLikeEditor() {
         break;
       case "q":
         containerRef.current?.blur();
+        break;
+      case "w":
+        setCol(c => {
+          const line = buffer[row];
+          const nextSpace = line.slice(c).search(/\s/);
+          if (nextSpace === -1) {
+            return line.length - 1;
+          }
+          return Math.min(c + nextSpace + 1, line.length);
+        })
         break;
     }
   };
