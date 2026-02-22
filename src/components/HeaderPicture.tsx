@@ -24,17 +24,27 @@ function HeaderPicture(){
         </div>
       </div>
 
-      <div className="h-full w-full border border-white flex justify-center items-center flex-col">
-        <div className="w-full h-fulltext-white">
-          <div className="w-13 h-full ">
-            <img src={delcastlePic} alt="delcastle" />
+      <div className="h-full w-full flex justify-center items-center flex-col">
+
+        <div className="w-full h-full flex">
+          <div className="w-20 h-full flex items-center text-white font-hack text-xs ">
+            <img className=""src={delcastlePic} alt="delcastle" />
+          </div>
+          <div className="w-full h-full flex items-center text-white font-hack text-xs ">
+            <p className="w-full h-full border flex justify-center items-center p-2">Delcastle Technical High School Graduate</p>
           </div>
         </div>
-        <div className="w-full h-full border-t border-white text-white">
-          <div className="w-13 h-full">
+
+        <div className="w-full h-full flex flex-row">
+          <div className="w-20 h-full font-hack text-xs">
             <img src={deltechPic} alt="deltech" />
           </div>
+
+          <div className="w-full h-full flex items-center text-white font-hack text-xs ">
+            <p className="w-full h-full border flex justify-center items-center p-2">Helllo slime</p>
+          </div>
         </div>
+
       </div>
     </div>
   )

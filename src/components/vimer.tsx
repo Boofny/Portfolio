@@ -71,19 +71,6 @@ export default function VimLikeEditor() {
           return Math.min(c + nextSpace + 1, line.length);
         })
         break;
-      case "b": // up next
-        // setCol(c => {
-        //   const line = buffer[row];
-        //   // find the next white space 
-        //   const nextSpace = line.slice(c).search(/\s/);
-        //
-        //   // only move cursor if the space after the word is -1 AND if the length of the buffer is not emty aka has words
-        //   if (nextSpace === -1 && buffer[row].length !== 0) { 
-        //     return line.length - 1;
-        //   }
-        //   return Math.min(c + nextSpace + 1, line.length);
-        // })
-        // break;
     }
   };
 
@@ -99,7 +86,7 @@ export default function VimLikeEditor() {
         {buffer.map((line, lineIdx) => (
           <div key={lineIdx} className={`flex ${lineIdx === row ? "bg-[#2c323c]" : ""}`}>
             {/* Line number */}
-            <span className={`w-10 text-gray-400 text-right pr-4 ${lineIdx === row ? "text-white font-bold pr-6" : ""}`}>
+            <span className={`font-bold w-10 text-gray-600 text-right pr-4 ${lineIdx === row ? "text-white font-bold pr-6" : ""}`}>
               {lineIdx === row ? lineIdx + 1 : Math.abs(lineIdx - row)}
             </span>
 
@@ -130,7 +117,7 @@ export default function VimLikeEditor() {
       {/* Status line */}
       <div className="h-5 bg-[#2c323c] text-gray-300 flex items-center ">
         <span className="h-full font-bold text-black bg-OneGreen px-3 flex items-center justify-center">NORMAL</span>
-        <div className="flex justify-end items-center w-0 h-0 border-l-OneGreen border-[10px] border-r-0 border-y-transparent"></div>
+        <div className="flex justify-end items-center w-0 h-0 border-l-OneGreen border-10 border-r-0 border-y-transparent"></div>
         <span className="ml-4 font-bold pr-4">
           row {row + 1}, col {col + 1}
         </span>
