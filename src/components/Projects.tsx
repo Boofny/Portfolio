@@ -38,7 +38,7 @@ function Projects(){
 
       <div className="w-115 h-full">
         <fieldset className="w-full h-full rounded bg-OneDarkGray border-3 border-OneGreen justify-center flex items-center flex-col top-0 pt-0">
-          <legend className="ml-10 text-OneYellow font-hack text-lg font-bold uppercase tracking-widest">[2]Tech Stack</legend>
+          <legend className="ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">[2]Tech Stack</legend>
           <div className="flex flex-col w-full h-full">
              {activeTab === "golive" && <TechStackGoLive/>}
              {activeTab === "asciiIt" && <TechStackAsciiIt/>}
