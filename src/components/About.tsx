@@ -1,33 +1,45 @@
+// import Vimer from "./vimer.tsx"
+// function About(){
+//   return(
+//     <fieldset className="w-150 h-105 m-20 rounded bg-OneDarkGray border-2 border-OneGreen justify-center flex items-center flex-col">
+//       <legend className="ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">[0]About Me</legend>
+//       {/* <div className="flex flex-col w-full h-full"> */}
+//       {/*   <Vimer></Vimer> */}
+//       {/* </div> */}
+//       <div className="hidden md:flex flex-col w-full h-full">
+//         <Vimer />
+//       </div>
+//       <div className="md:hidden p-4 font-hack text-gray-300 leading-relaxed space-y-3">
+//         <p>Hi, I'm David Brown.</p>
+//         <p>Your about-me content here...</p>
+//       </div>
+//       <div className="h-5 text-white flex justify-center pr-128 items-center "></div>
+//     </fieldset>
+//   )
+// }
+//
+// export default About;
 import Vimer from "./vimer.tsx"
-function About(){
-  return(
-    <fieldset className="w-150 h-105 m-20 rounded bg-OneDarkGray border-2 border-OneGreen justify-center flex items-center flex-col">
-      <legend className="ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">[0]About Me</legend>
-      <div className="flex flex-col w-full h-full">
-        <Vimer></Vimer>
+
+function About() {
+  return (
+    <fieldset className="w-full md:w-150 md:h-105 mx-4 my-6 md:m-20 rounded bg-OneDarkGray border-2 border-OneGreen flex flex-col">
+      <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
+        [0]About Me
+      </legend>
+
+      {/* Desktop: Vim editor */}
+      <div className="hidden md:flex flex-col w-full h-full">
+        <Vimer />
       </div>
-      <div className="h-5 text-white flex justify-center pr-128 items-center "></div>
+
+      {/* Mobile: plain card */}
+      <div className="md:hidden p-4 font-hack text-gray-300 leading-relaxed space-y-3">
+        <p>Hi, I'm David Brown.</p>
+        <p>Your about-me content here...</p>
+      </div>
     </fieldset>
   )
 }
 
-export default About;
-
-//
-// <div className="relative w-150 h-100 m-20 rounded bg-OneDarkGray border-2 border-OneGreen border-t-0 flex flex-col items-center pt-6">
-//
-//   {/* Title */}
-//   <div className="absolute top-0 left-0 w-full flex items-center text-gray-400 text-sm font-hack font-bold uppercase tracking-widest">
-//     <div className="flex-grow border-t border-OneGreen" />
-//     <span className="px-3 bg-OneDarkGray text-gray-300">
-//       About Me
-//     </span>
-//     <div className="flex-grow border-t border-OneGreen" />
-//   </div>
-//
-//   {/* Content */}
-//   <div className="w-105 h-40 border-b-2 border-OneYellow/75 flex flex-col justify-end items-center text-xl text-OneWhite font-semibold pb-5">
-//     Content goes here
-//   </div>
-//
-// </div>
+export default About

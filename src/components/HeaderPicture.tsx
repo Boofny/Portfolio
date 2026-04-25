@@ -1,13 +1,17 @@
-function HeaderPicture(){
+function HeaderPicture() {
   const delcastlePic = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIMCOIuRLah8n7W_hmtiH0y22qEaQqZsM3Og&s"
   const deltechPic = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8xOB8LE6X-nAkmNn3_s-8h7Ac_v6fjNJr1A&s"
 
-  return(
-    <div className="flex m-15 w-50 h-100 flex-col">
-      <div className="w-50 h-50 border-2 border-OneBlue rounded">
-        <img className="w-full h-full" src="https://i.pinimg.com/736x/b4/bb/b2/b4bbb2198b036fe1024571ec6b60f8b8.jpg" alt="headShot" />
+  return (
+    <div className="flex mx-4 my-6 md:m-15 w-full md:w-50 md:h-100 flex-col items-center">
+      
+      {/* Headshot */}
+      <div className="w-40 h-40 md:w-50 md:h-50 border-2 border-OneBlue rounded shrink-0">
+        <img className="w-full h-full object-cover" src="https://i.pinimg.com/736x/b4/bb/b2/b4bbb2198b036fe1024571ec6b60f8b8.jpg" alt="headShot" />
       </div>
-      <div className="w-full h-100 flex justify-center items-center gap-x-5">
+
+      {/* Social links */}
+      <div className="w-full flex justify-center items-center gap-x-5 py-4">
         <div className="w-10 h-10 flex justify-center items-center">
           <a href="https://github.com/Boofny" target="_blank" rel="noopener noreferrer">
             <button className="cursor-pointer">
@@ -24,31 +28,28 @@ function HeaderPicture(){
         </div>
       </div>
 
-      <div className="h-full w-full flex justify-center items-center flex-col">
-
-        <div className="w-full h-full flex">
-          <div className="w-20 h-full flex items-center text-white font-hack text-xs ">
-            <img className=""src={delcastlePic} alt="delcastle" />
+      {/* School entries */}
+      <div className="flex flex-col gap-2">
+        <div className="w-full flex items-center gap-2">
+          <div className="w-16 shrink-0">
+            <img className="w-full" src={delcastlePic} alt="delcastle" />
           </div>
-          <div className="w-full h-full flex items-center text-white font-hack text-xs ">
-            <p className="w-full h-full border flex justify-center items-center p-2">Delcastle Technical High School Graduate</p>
-          </div>
+          <p className="flex-1 text-white font-hack text-xs flex justify-center items-center p-2 border md:w-50 text-center">
+            Delcastle Technical High School Graduate
+          </p>
         </div>
-
-        <div className="w-full h-full flex flex-row">
-          <div className="w-20 h-full font-hack text-xs">
-            <img src={deltechPic} alt="deltech" />
+        <div className="w-full flex items-center gap-2">
+          <div className="w-16 shrink-0">
+            <img className="w-full" src={deltechPic} alt="deltech" />
           </div>
-
-          <div className="w-full h-full flex items-center text-white font-hack text-xs ">
-            <p className="w-full h-full border flex justify-center items-center p-2">Helllo slime</p>
-          </div>
+          <p className="flex-1 border text-white font-hack text-xs flex justify-center items-center p-2 text-center ">
+            Delaware Technical Community College Electronics Engineering Tech
+          </p>
         </div>
-
       </div>
+
     </div>
   )
 }
-export default HeaderPicture;
 
-
+export default HeaderPicture

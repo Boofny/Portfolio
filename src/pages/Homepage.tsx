@@ -3,30 +3,27 @@ import HeaderPicture from "../components/HeaderPicture.tsx"
 import About from "../components/About.tsx"
 import Projects from "../components/Projects.tsx"
 import Experience from "../components/Experience.tsx"
+import Skills from "../components/Skills.tsx"
 
-function Homepage(){
-  return(
-    <div className="m-0 flex flex-col ">
-      <Header></Header>
+function Homepage() {
+  return (
+    <div className="m-0 flex flex-col">
+      <Header />
       <main className="pt-15 w-full flex justify-center items-center">
-        <div className="flex justify-center items-center">
-          <HeaderPicture></HeaderPicture>
-          <About></About>
+        {/*Dont know how much i like nothaving other components visible but we will see*/}
+        <div className="flex flex-col md:flex-row justify-center items-center w-full px-4 md:px-0 pt-5"> 
+          <HeaderPicture />
+          <About />
         </div>
       </main>
+      <Projects />
       <div>
-        <Projects></Projects>
-      </div>
-      <div>
-        {/* <div className="flex items-center text-gray-400 text-xl font-hack font-bold"> */}
-        {/*   <div className="flex-grow border-t-4 border-OneGreen" /> */}
-        {/*   <span className="px-2 text-gray-300 ">About Me</span> */}
-        {/*   <div className="flex-grow border-t-4 border-OneGreen" /> */}
-        {/* </div> */}
-        <Experience></Experience>
+        <Experience />
+        <Skills />
       </div>
     </div>
   )
 }
-
 export default Homepage
+
+
