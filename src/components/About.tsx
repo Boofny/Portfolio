@@ -29,7 +29,7 @@ function About() {
       </legend>
 
       {/* Desktop: Vim editor */}
-      <div className="hidden md:flex flex-col w-full h-full">
+      <div className="hidden md:flex flex-col w-full">
         <Vimer />
       </div>
 

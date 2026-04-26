@@ -1,4 +1,4 @@
-import {useRef, useState, useEffect} from "react";
+import {useRef, useState} from "react";
 
 const buffer = [
   "Hello All",
@@ -13,17 +13,14 @@ const buffer = [
   "",
   "",
   "",
+  "",
 ];
 
-export default function VimLikeEditor() {
+export default function Vimer() {
   const [row, setRow] = useState(0);
   const [col, setCol] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    containerRef.current?.focus();
-  }, []);
-  
   const handleKeyDown = (e: React.KeyboardEvent) => {
     e.preventDefault();
 

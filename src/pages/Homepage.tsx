@@ -18,8 +18,8 @@ function Homepage() {
       </main>
       <Projects />
       <div>
-        <Experience />
         <Skills />
+        <Experience />
       </div>
     </div>
   )
