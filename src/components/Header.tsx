@@ -22,24 +22,24 @@ function Header() {
 
       {/* Desktop Nav */}
       <div className="font-semibold hidden md:flex shrink-0 h-15 items-center font-hack text-lg">
-        <button className="hover:cursor-pointer px-4 py-2 text-OneGreen font-hack -mono group flex items-center relative border-l border-OneGreen/30">
+        <button className="hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-l border-OneGreen/30">
           <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
-          <span>about</span>
+          <span>About</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
         </button>
-        <button className="hover:cursor-pointer px-4 py-2 text-OneGreen font-hack -mono group flex items-center relative border-x border-OneGreen/30">
+        <button className="hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-x border-OneGreen/30">
           <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
-          <span>projects</span>
+          <span>Projects</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
         </button>
-        <button className="hover:cursor-pointer px-4 py-2 text-OneGreen font-hack -mono group flex items-center relative border-r border-OneGreen/30">
+        <button className="hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-r border-OneGreen/30">
           <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
-          <span>skills</span>
+          <span>Skills</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
         </button>
-        <button className="hover:cursor-pointer px-4 py-2 text-OneGreen font-hack -mono group flex items-center relative border-l border-OneGreen/30">
+        <button className="hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-l border-OneGreen/30">
           <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
-          <span>experience</span>
+          <span>Experience</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
         </button>
       </div>
@@ -57,24 +57,24 @@ function Header() {
       {/* Mobile Menu — stays fixed for a dropdown */}
       <div className={`md:hidden fixed top-15 right-0 w-64 bg-OneDarkGray border-l-2 border-b-2 border-OneGreen transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex flex-col p-4 gap-2 font-hack">
-          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack -mono group flex items-center relative border-b border-OneGreen/30">
+          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
             <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
-            <span>about</span>
+            <span>About</span>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
           </button>
-          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack -mono group flex items-center relative border-b border-OneGreen/30">
+          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
             <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
-            <span>projects</span>
+            <span>Projects</span>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
           </button>
-          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack -mono group flex items-center relative border-b border-OneGreen/30">
+          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
             <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
-            <span>skills</span>
+            <span>Skills</span>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
           </button>
-          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack -mono group flex items-center relative">
+          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative">
             <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
-            <span>experience</span>
+            <span>Experience</span>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
           </button>
         </div>
