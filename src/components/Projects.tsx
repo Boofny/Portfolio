@@ -27,12 +27,7 @@ function Projects() {
             {activeTab === "asciiIt" && <AsciiIt />}
             {activeTab === "urlshorter" && <UrlShorter />}
           </div>
-          {/* Tab buttons */}
-          {/* <div className="w-full h-15 flex justify-center items-center text-white font-bold font-hack border-t-3 border-OneGreen md:text-lg text-md"> */}
-          {/*   <button className={`hover:text-xl hover:cursor-pointer w-full h-full ${getButtonClasses("golive")}`} onClick={() => handleClickOption("golive")}>Go Live</button> */}
-          {/*   <button className={`border-x-3 border-OneGreen hover:text-xl hover:cursor-pointer w-full h-full ${getButtonClasses("asciiIt")}`} onClick={() => handleClickOption("asciiIt")}>Ascii It</button> */}
-          {/*   <button className={`hover:text-xl hover:cursor-pointer w-full h-full ${getButtonClasses("urlshorter")}`} onClick={() => handleClickOption("urlshorter")}>URL Shortner</button> */}
-          {/* </div> */}
+          {/*Buttons bellow need better hover effects not just copying the headers effect*/}
           <div className="w-full h-15 flex justify-center items-center text-white font-bold font-hack border-t-3 border-OneGreen md:text-lg text-md">
             <button
               className={`hover:cursor-pointer w-full h-full group flex items-center justify-center relative border-r border-OneGreen/30 transition-colors duration-300 ${getButtonClasses("golive")}`}
