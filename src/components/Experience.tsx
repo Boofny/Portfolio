@@ -1,7 +1,7 @@
 function Experience(){
   return(
-    <div className="h-128 w-full pb-10 flex justify-center items-center">
-      <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded mx-10 h-full w-full md:w-1/2">
+    <div className="h-128 w-full pb-10 flex justify-center items-center md:pt-20">
+      <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded mx-10 h-full w-full md:w-full">
         <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
           [4]Experience
         </legend>

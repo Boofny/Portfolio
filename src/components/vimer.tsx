@@ -112,12 +112,17 @@ export default function Vimer() {
       </div>
 
       {/* Status line */}
-      <div className="h-5 bg-[#2c323c] text-gray-300 flex items-center ">
+      <div className="h-5 bg-[#2c323c] flex items-center relative">
         <span className="h-full font-bold text-black bg-OneGreen px-3 flex items-center justify-center">NORMAL</span>
         <div className="flex justify-end items-center w-0 h-0 border-l-OneGreen border-10 border-r-0 border-y-transparent"></div>
-        <span className="ml-4 font-bold pr-4">
-          row {row + 1}, col {col + 1}
-        </span>
+        <p className="text-gray-400 h-full font-semibold px-3 flex items-center justify-center">AboutMe.txt</p>
+
+        <div className="h-full flex justify-center items-center right-0 absolute">
+          <div className="flex justify-end items-center w-0 h-0 border-r-OneGreen border-10 border-l-0 border-y-transparent"></div>
+          <span className="bg-OneGreen font-bold px-3 flex justify-center items-center h-full text-black">
+            {row + 1}:{col + 1}
+          </span>
+        </div>
       </div>
     </div>
   );

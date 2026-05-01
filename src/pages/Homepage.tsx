@@ -17,7 +17,7 @@ function Homepage() {
         </div>
       </main>
       <Projects />
-      <div>
+      <div className="border border-white flex justify-center items-center flex-col md:flex-row">
         <Skills />
         <Experience />
       </div>
