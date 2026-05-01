@@ -33,31 +33,35 @@ function Projects() {
               className={`hover:cursor-pointer w-full h-full group flex items-center justify-center relative border-r border-OneGreen/30 transition-colors duration-300 ${getButtonClasses("golive")}`}
               onClick={() => handleClickOption("golive")}
             >
-              <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "golive" ? "text-black" : "text-OneGreen"}`}>&gt;</span>
+              <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "golive" ? "text-black" : "text-OneGreen"}`}>[</span>
               <span>Go Live</span>
+              <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "golive" ? "text-black" : "text-OneGreen"}`}>]</span>
             </button>
           
             <button
               className={`hover:cursor-pointer w-full h-full group flex items-center justify-center relative border-x-3 border-OneGreen transition-colors duration-300 ${getButtonClasses("asciiIt")}`}
               onClick={() => handleClickOption("asciiIt")}
             >
-              <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "asciiIt" ? "text-black" : "text-OneGreen"}`}>&gt;</span>
+              <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "asciiIt" ? "text-black" : "text-OneGreen"}`}>[</span>
               <span>IDK YET</span>
+              <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "asciiIt" ? "text-black" : "text-OneGreen"}`}>]</span>
             </button>
           
             <button
               className={`hover:cursor-pointer w-full h-full group flex items-center justify-center relative border-l border-OneGreen/30 transition-colors duration-300 ${getButtonClasses("skillscan")}`}
               onClick={() => handleClickOption("skillscan")}
             >
-              <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "skillscan" ? "text-black" : "text-OneGreen"}`}>&gt;</span>
+              <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "skillscan" ? "text-black" : "text-OneGreen"}`}>[</span>
               <span>Skill Scan</span>
+              <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "skillscan" ? "text-black" : "text-OneGreen"}`}>]</span>
             </button>
           </div>
         </div>
       </fieldset>
 
       {/* Tech Stack fieldset — below on mobile, beside on desktop */}
-      <fieldset className="md:w-80 md:h-125 md:shrink-0 bg-OneDarkGray border-3 border-OneGreen flex flex-col rounded">
+      {/*do NOT listen to the evil lsp*/}
+      <fieldset className="md:block hidden md:w-80 md:h-125 md:shrink-0 bg-OneDarkGray border-3 border-OneGreen flex flex-col rounded">
         <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
           [2]Overview
         </legend>

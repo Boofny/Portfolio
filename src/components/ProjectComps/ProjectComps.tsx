@@ -1,3 +1,5 @@
+import { GoLiveDesc, DNYET, SkillScanDesc}from "./ProjectConsts.ts"
+
 export function GoLive() {
   return (
     <div className="w-full h-full bg-OneDarkGray flex flex-col">
@@ -7,9 +9,9 @@ export function GoLive() {
           <img className="w-full h-full object-cover" src="GolivePic" alt="golive" />
         </div>
         {/* Description */}
-        {/* <div className="w-full md:w-72 md:shrink-0 border border-white p-2"> */}
-        {/*   <p className="text-white">projects explain</p> */}
-        {/* </div> */}
+        <div className="md:hidden block w-full md:w-72 md:shrink-0 border border-white p-2">
+          <p className="text-white">{GoLiveDesc}</p>
+        </div>
       </div>
       {/* Footer bar */}
       <div className="bg-OneLightGray w-full h-20 flex shrink-0">
@@ -31,9 +33,9 @@ export function AsciiIt() {
           <img className="w-full h-full object-cover" src="GolivePic" alt="asciiit" />
         </div>
         {/* Description */}
-        {/* <div className="w-full md:w-72 md:shrink-0 border border-white p-2"> */}
-        {/*   <p className="text-white">projects explain</p> */}
-        {/* </div> */}
+        <div className="md:hidden block w-full md:w-72 md:shrink-0 border border-white p-2">
+          <p className="text-white">{DNYET}</p>
+        </div>
       </div>
       {/* Footer bar */}
       <div className="bg-OneLightGray w-full h-20 flex shrink-0">
@@ -55,9 +57,9 @@ export function SkillScan() {
           <img className="w-full h-full object-cover" src="GolivePic" alt="urlshortner" />
         </div>
         {/* Description */}
-        {/* <div className="w-full md:w-72 md:shrink-0 border border-white p-2"> */}
-        {/*   <p className="text-white">projects explain</p> */}
-        {/* </div> */}
+        <div className="md:hidden block w-full md:w-72 md:shrink-0 border border-white p-2">
+          <p className="text-white">{SkillScanDesc}</p>
+        </div>
       </div>
       {/* Footer bar */}
       <div className="bg-OneLightGray w-full h-20 flex shrink-0">

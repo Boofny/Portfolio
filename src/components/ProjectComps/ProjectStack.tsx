@@ -1,8 +1,9 @@
+import { GoLiveDesc, DNYET, SkillScanDesc}from "./ProjectConsts.ts"
 
 export function TechStackGoLive() { // comps
   return(
     <div className="w-full h-full text-white">
-      <p>GoLive</p>
+      <p>{GoLiveDesc}</p>
     </div>
   )
 }
@@ -10,7 +11,7 @@ export function TechStackGoLive() { // comps
 export function TechStackAsciiIt() {
   return(
     <div className="w-full h-full text-white">
-      <p>AsciiIt</p>
+      <p>{DNYET}</p>
     </div>
   )
 }
@@ -18,7 +19,7 @@ export function TechStackAsciiIt() {
 export function TechStackUrlShorter() {
   return(
     <div className="w-full h-full text-white">
-      <p>UrlShorter</p>
+      <p>{SkillScanDesc}</p>
     </div>
   )
 }
