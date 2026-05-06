@@ -5,6 +5,7 @@ import AboutMobile from "../components/Abouts/AboutMobile.tsx"
 import Projects from "../components/Projects.tsx"
 import Experience from "../components/Experience.tsx"
 import Skills from "../components/Skills.tsx"
+import Card from "../components/Card.tsx"
 
 function Homepage() {
   return (
@@ -20,6 +21,8 @@ function Homepage() {
       </main>
       <Projects />
       <div className="flex flex-col md:flex-row items-stretch md:px-15">
+        {/* <Card title="[5]Another"> */}
+        {/* </Card> */}
         <Skills/>
         <Experience />
       </div>
