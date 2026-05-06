@@ -35,7 +35,7 @@ function About() {
 
       {/* Mobile: plain card */}
       <div className="md:hidden p-4 font-hack text-gray-300 leading-relaxed space-y-3">
-        <p>Hi, I'm David Brown.</p>
+        <p>Hi, I'm Brandon Romero.</p>
         <p>Your about-me content here...</p>
       </div>
     </fieldset>
