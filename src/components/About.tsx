@@ -23,7 +23,7 @@ import Vimer from "./vimer.tsx"
 
 function About() {
   return (
-    <fieldset className="w-full md:w-150 md:h-106 mx-4 my-6 md:m-20 rounded bg-OneDarkGray border-2 border-OneGreen flex flex-col">
+    <fieldset className="w-full md:w-150 md:h-106 mx-4 my-6 md:m-20 rounded bg-OneDarkGray border-3 border-OneGreen flex flex-col box-border">
       <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
         [0]About Me
       </legend>

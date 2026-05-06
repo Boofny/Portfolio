@@ -30,19 +30,19 @@ function HeaderPicture() {
 
       {/* School entries */}
       <div className="flex flex-col gap-2 ">
-        <div className="w-80 flex items-center gap-2 bg-OneDarkGray md:w-full">
+        <div className="w-80 flex items-center gap-2 md:w-full">
           <div className="w-16 shrink-0 border-OneBlue border-2 rounded">
             <img className="w-full rounded" src={delcastlePic} alt="delcastle" />
           </div>
-          <p className="flex-1 text-white font-hack text-xs flex justify-center items-center p-2 border md:w-50 border-OneBlue h-20 rounded">
+          <p className="flex-1 text-white font-hack text-xs flex justify-center items-center p-2 border md:w-50 border-OneBlue h-20 rounded bg-OneDarkGray">
             Delcastle Technical High School Graduate
           </p>
         </div>
-        <div className="w-80 flex items-center gap-2 bg-OneDarkGray md:w-full">
+        <div className="w-80 flex items-center gap-2 md:w-full">
           <div className="w-16 shrink-0 border-2 border-OneBlue rounded">
             <img className="w-full border-2 border-black" src={deltechPic} alt="deltech" />
           </div>
-          <p className="flex-1 border text-white font-hack text-xs flex justify-center items-center md:w-50 p-2 border-OneBlue h-20 rounded">
+          <p className="flex-1 border text-white font-hack text-xs flex justify-center items-center md:w-50 p-2 border-OneBlue h-20 rounded bg-OneDarkGray">
             Delaware Technical Community College Electronics Engineering Tech
           </p>
         </div>
