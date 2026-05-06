@@ -17,7 +17,7 @@ function Homepage() {
         </div>
       </main>
       <Projects />
-      <div className="flex flex-col md:flex-row items-stretch">
+      <div className="flex flex-col md:flex-row items-stretch border md:px-0">
         <Skills/>
         <Experience />
       </div>
