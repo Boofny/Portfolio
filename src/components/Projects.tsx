@@ -17,7 +17,7 @@ function Projects() {
     <div className="w-full 2xl:w-15/16 2xl:pl-50 box-border flex flex-col md:flex-row justify-center items-stretch px-4 md:px-25 md:pt-20 gap-6 md:gap-20 py-6 md:overflow-hidden">
       {/* Projects fieldset */}
       <fieldset className="w-full md:h-125 bg-OneDarkGray border-3 border-OneGreen flex flex-col rounded box-border min-w-0">
-        <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
+        <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest md:block hidden">
           [1]Projects
         </legend>
         <div className="flex flex-col w-full h-full">
