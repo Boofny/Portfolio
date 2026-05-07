@@ -1,6 +1,10 @@
+// import { FaGolang }from "react-icons/fa6"
+
 function Skills(){
 
-  const skills = ["Go", "Java", "React", "SQL", "Git", "Linux", "TAILWIND", "NEXTJS", "Astro"];
+  const skills: string[] = ["Go", "Java", "React", "SQL", "Git", "Linux", "TAILWIND", "NEXTJS", "Astro"];
+  // const skills: React.ReactElement[] = [<FaGolang/>]
+
   return(
     <div className="md:h-128 w-full pb-10 flex justify-center items-center pt-10 md:pt-20">
       <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded mx-10 h-full w-full md:w-full">
