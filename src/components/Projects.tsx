@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { GoLive, AsciiIt, SkillScan } from "./ProjectComps/ProjectComps.tsx"
-import { TechStackGoLive, TechStackAsciiIt, TechStackUrlShorter } from "./ProjectComps/ProjectStack.tsx"
+// import { TechStackGoLive, TechStackAsciiIt, TechStackUrlShorter} from "./ProjectComps/ProjectStack.tsx"
+import {stacks} from "./ProjectComps/ProjectStack.tsx"
 
 type Tab = "golive" | "asciiIt" | "skillscan"
 
@@ -14,13 +15,6 @@ function Projects() {
 
   return (
     <div className="w-full 2xl:w-15/16 2xl:pl-50 box-border flex flex-col md:flex-row justify-center items-stretch px-4 md:px-25 md:pt-20 gap-6 md:gap-20 py-6 md:overflow-hidden"> 
-      {/*if this next commit does not work uncomment this bellow*/}
-      {/* Projects fieldset */}
-      {/* <div className="w-full"> */}
-      {/* <fieldset className="w-full md:h-125 bg-OneDarkGray border-3 border-OneGreen flex flex-col rounded box-border min-w-0"> */}
-        {/* <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest"> */}
-          {/* [1]Projects */}
-        {/* </legend> */}
       <div className="w-full flex justify-center items-center ">
         <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded h-full w-full md:w-full">
           <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
@@ -72,10 +66,10 @@ function Projects() {
         <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
           [2]Overview
         </legend>
+
+        {/* Overview selection NOTE: not seen on mobile will fix later  */}
         <div className="flex flex-col w-full h-full">
-          {activeTab === "golive" && <TechStackGoLive />}
-          {activeTab === "asciiIt" && <TechStackAsciiIt />}
-          {activeTab === "skillscan" && <TechStackUrlShorter />}
+          {stacks[activeTab]} {/* WAY better  */}
         </div>
       </fieldset>
 
