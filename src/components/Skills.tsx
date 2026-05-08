@@ -1,10 +1,71 @@
 // import { FaGolang }from "react-icons/fa6"
+import type { ReactElement } from "react"
+
+import {
+  FaJava,
+  FaReact,
+  FaGitAlt,
+  FaLinux,
+} from "react-icons/fa"
+
+import {
+  SiGo,
+  SiPostgresql,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiAstro,
+} from "react-icons/si"
 
 function Skills(){
 
-  const skills: string[] = ["Go", "Java", "React", "SQL", "Git", "Linux", "TAILWIND", "NEXTJS", "Astro"];
-  // const skills: React.ReactElement[] = [<FaGolang/>]
+  // const skills: string[] = ["Go", "Java", "React", "Postgresql", "Git", "Linux", "TAILWIND", "NEXTJS", "Astro"];
+  // const skillsIcons: React.ReactElement[] = [<FaGolang/>]
 
+type Skill = {
+  name: string
+  icon: ReactElement
+}
+
+// const iconSize: number = 48;
+
+const skills: Skill[] = [
+  {
+    name: "Go",
+    icon: <SiGo  />,
+  },
+  {
+    name: "Java",
+    icon: <FaJava />,
+  },
+  {
+    name: "React",
+    icon: <FaReact />,
+  },
+  {
+    name: "Postgresql",
+    icon: <SiPostgresql  />,
+  },
+  {
+    name: "Git",
+    icon: <FaGitAlt/>,
+  },
+  {
+    name: "Linux",
+    icon: <FaLinux/>,
+  },
+  {
+    name: "TAILWIND",
+    icon: <SiTailwindcss/>,
+  },
+  {
+    name: "NEXTJS",
+    icon: <SiNextdotjs />,
+  },
+  {
+    name: "Astro",
+    icon: <SiAstro className="hover:text-OneYellow"/>,
+  },
+]
   return(
     <div className="md:h-128 w-full pb-10 flex justify-center items-center pt-10 md:pt-20">
       <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded mx-10 h-full w-full md:w-full">
@@ -12,12 +73,12 @@ function Skills(){
           [3]Skills
         </legend>
           <div className="grid grid-cols-3 gap-3 md:w-full p-2 pt-0 text-white md:h-full">
-          {skills.map((skill, i) => (
+          {skills.map((skill) => (
             <div
-              key={i}
-              className="border flex items-center justify-center rounded aspect-square md:aspect-auto md:px-3 md:py-2"
+              key={skill.name}
+              className="border flex items-center justify-center rounded aspect-square md:aspect-auto md:px-3 md:py-2 md:text-5xl text-4xl"
             >
-              {skill}
+              {skill.icon}
             </div>
           ))}
         </div>
