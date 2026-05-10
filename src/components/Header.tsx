@@ -1,11 +1,49 @@
 import { useState } from "react"
 
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const defaultOffset = 80 // working for normal laptop and md screen
+  const mobileSkillsOffset = 10 // edge case for mobile 
+  const mobileAboutOffset = window.outerHeight // edge case for mobile
+
+  const scrollToSection = (id: string, offset: number) => {
+    const section = document.getElementById(id)
+  
+    if (!section) return
+  
+    const y =
+      section.getBoundingClientRect().top +
+      window.scrollY -
+      offset
+  
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    })
+  }
+  
+  // const mobileAboutScroll = () => {
+  //   const section = document.getElementById("about")
+  //
+  //   if (!section) return
+  //
+  //   const headerOffset = window.outerHeight //using outer height in order to have the abut button go all to the top
+  //
+  //   const y =
+  //     section.getBoundingClientRect().top +
+  //     window.scrollY -
+  //     headerOffset
+  //
+  //   window.scrollTo({
+  //     top: y,
+  //     behavior: "smooth",
+  //   })
+  // }
 
   return (
     <div className="bg-OneDarkGray fixed top-0 left-0 right-0 h-15 flex items-center border-b-2 border-OneGreen z-50">
-      
+
       {/* Logo */}
       <button className="ease-in-out duration-300 text-OneGreen text-4xl shrink-0 border-3 border-OneGreen w-15 h-15 flex justify-center items-center rounded font-bold p-1 hover:bg-OneGreen hover:text-black font-display">
         {">_"}
@@ -22,27 +60,28 @@ function Header() {
 
       {/* Desktop Nav */}
       <div className="font-semibold hidden md:flex shrink-0 h-15 items-center font-hack text-md">
-        <button className="hover:text-OneYellow hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-l border-OneGreen/30">
+        <button className="hover:text-OneYellow hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-l border-OneGreen/30" onClick={() => scrollToSection("about", defaultOffset)}>
           <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
           <span>About</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
         </button>
-        <button className="hover:text-OneBlue hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-x border-OneGreen/30">
+        <button className="hover:text-OneBlue hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-x border-OneGreen/30" onClick={() => scrollToSection("projects", defaultOffset)}>
           <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
           <span>Projects</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
         </button>
-        <button className="hover:text-OneMagenta hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-r border-OneGreen/30">
+        <button className="hover:text-OneMagenta hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-r border-OneGreen/30" onClick={() => scrollToSection("skills", defaultOffset)}>
           <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
           <span>Skills</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
         </button>
-        <button className="hover:text-OneRed hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-l border-OneGreen/30">
+        <button className="hover:text-OneRed hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-l border-OneGreen/30" onClick={() => scrollToSection("skills", defaultOffset)}>
           <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
           <span>Experience</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
         </button>
       </div>
+      {/* Desktop Nav */}
 
       {/* Mobile Hamburger */}
       <button
@@ -57,30 +96,32 @@ function Header() {
       {/* Mobile Menu — stays fixed for a dropdown */}
       <div className={`md:hidden fixed top-15 right-0 w-64 bg-OneDarkGray border-l-2 border-b-2 border-OneGreen transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex flex-col p-4 gap-2 font-hack">
-          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
+          <button onClick={() => {setIsOpen(false) ; scrollToSection("about", mobileAboutOffset)}} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
             <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
             <span>About</span>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
           </button>
-          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
+          <button onClick={() => {setIsOpen(false); scrollToSection("projects", defaultOffset)}} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
             <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
             <span>Projects</span>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
           </button>
-          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
+          <button onClick={() => {setIsOpen(false) ; scrollToSection("skills", mobileSkillsOffset)}} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
             <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
             <span>Skills</span>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
           </button>
-          <button onClick={() => setIsOpen(false)} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative">
+          <button onClick={() => {setIsOpen(false) ; scrollToSection("skills", mobileSkillsOffset)}} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative">
             <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
             <span>Experience</span>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
           </button>
         </div>
       </div>
+      {/* Mobile Hamburger */}
     </div>
   )
 }
 
 export default Header
+

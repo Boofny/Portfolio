@@ -18,54 +18,122 @@ import {
 
 function Skills(){
 
-  // const skills: string[] = ["Go", "Java", "React", "Postgresql", "Git", "Linux", "TAILWIND", "NEXTJS", "Astro"];
-  // const skillsIcons: React.ReactElement[] = [<FaGolang/>]
-
 type Skill = {
   name: string
   icon: ReactElement
+  styles: string
 }
 
-// const iconSize: number = 48;
-
+// NOTE: could do a cool if clicked explain how i use each skill like golang click and a card shows how i make backends with dbs and or frameworks
+const globalCSS = `
+  hover:cursor-pointer
+  border
+  bg-zinc-900
+  flex items-center
+  justify-center
+  rounded-sm
+  aspect-square
+  md:aspect-auto
+  md:px-3 md:py-2
+  md:text-5xl
+  text-4xl
+  transition-all
+  duration-150
+  hover:scale-103
+`
 const skills: Skill[] = [
   {
     name: "Go",
-    icon: <SiGo  />,
+    icon: <SiGo />,
+    styles: `
+      border-zinc-700
+      hover:text-cyan-400
+      hover:border-cyan-400
+      hover:bg-cyan-400/5
+    `,
   },
   {
     name: "Java",
     icon: <FaJava />,
+    styles: `
+      border-zinc-700
+      hover:text-red-500
+      hover:border-red-500
+      hover:bg-red-500/5
+    `,
   },
   {
     name: "React",
     icon: <FaReact />,
+    styles: `
+      border-zinc-700
+      hover:text-cyan-300
+      hover:border-cyan-300
+      hover:bg-cyan-300/5
+    `,
   },
   {
     name: "Postgresql",
-    icon: <SiPostgresql  />,
+    icon: <SiPostgresql />,
+    styles: `
+      border-zinc-700
+      hover:text-blue-400
+      hover:border-blue-400
+      hover:bg-blue-400/5
+    `,
   },
   {
     name: "Git",
-    icon: <FaGitAlt/>,
+    icon: <FaGitAlt />,
+    styles: `
+      border-zinc-700
+      hover:text-orange-500
+      hover:border-orange-500
+      hover:bg-orange-500/5
+    `,
   },
   {
     name: "Linux",
-    icon: <FaLinux/>,
+    icon: <FaLinux />,
+    styles: `
+      border-zinc-700
+      hover:text-black
+      hover:border-white
+      hover:bg-white/50
+    `,
   },
   {
     name: "TAILWIND",
-    icon: <SiTailwindcss/>,
+    icon: <SiTailwindcss />,
+    styles: `
+      border-zinc-700
+      hover:text-sky-400
+      hover:border-sky-400
+      hover:bg-sky-400/5
+    `,
   },
   {
     name: "NEXTJS",
     icon: <SiNextdotjs />,
+    styles: `
+      border-zinc-700
+      hover:text-black
+      hover:border-white
+      hover:bg-white/50
+    `,
   },
   {
     name: "Astro",
-    icon: <SiAstro/>,
+    icon: <SiAstro />,
+    styles: `
+      border-zinc-700
+      hover:text-orange-400
+      hover:border-orange-400
+      hover:bg-orange-400/5
+    `,
   },
 ]
+
 // skills component will be excluded from using the Card comp due to the amount of imports used
   return(
     <div className="md:h-128 w-full pb-10 flex justify-center items-center pt-10 md:pt-20">
@@ -80,7 +148,7 @@ const skills: Skill[] = [
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="border border-OneYellow flex items-center justify-center rounded aspect-square md:aspect-auto md:px-3 md:py-2 md:text-5xl text-4xl ease-in-out transition hover:text-OneCyan"
+              className={`${skill.styles} ${globalCSS}`}
             >
               {skill.icon}
             </div>
