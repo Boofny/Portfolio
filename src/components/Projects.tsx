@@ -1,6 +1,5 @@
 import { useState } from "react"
-import { GoLive, AsciiIt, SkillScan } from "./ProjectComps/ProjectComps.tsx"
-// import { TechStackGoLive, TechStackAsciiIt, TechStackUrlShorter} from "./ProjectComps/ProjectStack.tsx"
+import {CompStack} from "./ProjectComps/ProjectComps.tsx"
 import {stacks} from "./ProjectComps/ProjectStack.tsx"
 
 type Tab = "golive" | "asciiIt" | "skillscan"
@@ -23,9 +22,7 @@ function Projects() {
           <div className="flex flex-col w-full h-full">
             {/* Project content */}
             <div className="flex-1 text-white flex justify-center items-center p-2">
-              {activeTab === "golive" && <GoLive />}
-              {activeTab === "asciiIt" && <AsciiIt />}
-              {activeTab === "skillscan" && <SkillScan/>}
+              {CompStack[activeTab]} {/* WAY better  */}
             </div>
             {/*Buttons bellow need better hover effects not just copying the headers effect*/}
             <div className="w-full h-15 flex justify-center items-center text-white font-bold font-hack border-t-3 border-OneGreen md:text-lg text-md">

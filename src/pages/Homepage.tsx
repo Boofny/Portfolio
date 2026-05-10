@@ -22,7 +22,7 @@ function Homepage() {
       <Projects />
       <div className="flex flex-col md:flex-row items-stretch md:px-15">
         <Skills/>
-        <Card title="[4]Experience">
+        <Card title="[4]Experience" mobileTitle="[3]Experience">
           <Experience />
         </Card>
       </div>
