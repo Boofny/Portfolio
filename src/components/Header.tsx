@@ -19,27 +19,9 @@ function Header() {
   
     window.scrollTo({
       top: y,
-      behavior: "smooth",
+      // behavior: "smooth", // trying to remove smooth scrolling from mobile 
     })
   }
-  
-  // const mobileAboutScroll = () => {
-  //   const section = document.getElementById("about")
-  //
-  //   if (!section) return
-  //
-  //   const headerOffset = window.outerHeight //using outer height in order to have the abut button go all to the top
-  //
-  //   const y =
-  //     section.getBoundingClientRect().top +
-  //     window.scrollY -
-  //     headerOffset
-  //
-  //   window.scrollTo({
-  //     top: y,
-  //     behavior: "smooth",
-  //   })
-  // }
 
   return (
     <div className="bg-OneDarkGray fixed top-0 left-0 right-0 h-15 flex items-center border-b-2 border-OneGreen z-50">
