@@ -2,6 +2,7 @@ import { useState } from "react"
 import {CompStack} from "./ProjectComps/ProjectComps.tsx"
 import {stacks} from "./ProjectComps/ProjectStack.tsx"
 
+//TODO: need to make the code here more moduler and find some alternatives if needed
 type Tab = "golive" | "asciiIt" | "skillscan"
 
 function Projects() {
@@ -34,7 +35,7 @@ function Projects() {
                 <span>Go Live</span>
                 <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "golive" ? "text-black" : "text-OneGreen"}`}>]</span>
               </button>
-            
+
               <button
                 className={`hover:cursor-pointer w-full h-full group flex items-center justify-center relative border-x-3 border-OneGreen transition-colors duration-300 ${getButtonClasses("asciiIt")}`}
                 onClick={() => handleClickOption("asciiIt")}
@@ -43,7 +44,7 @@ function Projects() {
                 <span>IDK YET</span>
                 <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "asciiIt" ? "text-black" : "text-OneGreen"}`}>]</span>
               </button>
-            
+
               <button
                 className={`hover:cursor-pointer w-full h-full group flex items-center justify-center relative border-l border-OneGreen/30 transition-colors duration-300 ${getButtonClasses("skillscan")}`}
                 onClick={() => handleClickOption("skillscan")}
@@ -64,7 +65,6 @@ function Projects() {
           [2]Overview
         </legend>
 
-        {/* Overview selection NOTE: not seen on mobile will fix later  */}
         <div className="flex flex-col w-full h-full">
           {stacks[activeTab]} {/* WAY better  */}
         </div>
