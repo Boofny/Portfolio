@@ -1,11 +1,12 @@
-import { useState } from "react"
+import {useState} from "react"
 import {CompStack} from "./ProjectComps/ProjectComps.tsx"
-import {stacks} from "./ProjectComps/ProjectStack.tsx"
+import {Stacks} from "./ProjectComps/ProjectStack.tsx"
 
 //TODO: need to make the code here more moduler and find some alternatives if needed
-type Tab = "golive" | "asciiIt" | "skillscan"
+type Tab = "golive" | "asciiIt" | "skillscan" 
 
 function Projects() {
+  const tabs: Tab[] = [ "golive", "asciiIt", "skillscan", ]
   const [activeTab, setActiveTab] = useState<Tab>("golive")
 
   const handleClickOption = (tab: Tab) => setActiveTab(tab)
@@ -25,34 +26,52 @@ function Projects() {
             <div className="flex-1 text-white flex justify-center items-center p-2">
               {CompStack[activeTab]} {/* WAY better  */}
             </div>
-            {/*Buttons bellow need better hover effects not just copying the headers effect*/}
             <div className="w-full h-15 flex justify-center items-center text-white font-bold font-hack border-t-3 border-OneGreen md:text-lg text-md">
-              <button
-                className={`hover:cursor-pointer w-full h-full group flex items-center justify-center relative border-r border-OneGreen/30 transition-colors duration-300 ${getButtonClasses("golive")}`}
-                onClick={() => handleClickOption("golive")}
-              >
-                <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "golive" ? "text-black" : "text-OneGreen"}`}>[</span>
-                <span>Go Live</span>
-                <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "golive" ? "text-black" : "text-OneGreen"}`}>]</span>
-              </button>
 
-              <button
-                className={`hover:cursor-pointer w-full h-full group flex items-center justify-center relative border-x-3 border-OneGreen transition-colors duration-300 ${getButtonClasses("asciiIt")}`}
-                onClick={() => handleClickOption("asciiIt")}
-              >
-                <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "asciiIt" ? "text-black" : "text-OneGreen"}`}>[</span>
-                <span>IDK YET</span>
-                <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "asciiIt" ? "text-black" : "text-OneGreen"}`}>]</span>
-              </button>
+              {tabs.map((tab, index) => (
+                <button
+                  key={tab}
+                  onClick={() => handleClickOption(tab)}
+                  className={`
+                    text-md hover:cursor-pointer w-full h-full group flex items-center justify-center relative transition-colors duration-300
+                    ${getButtonClasses(tab)}
+                    ${
+                      index === 0
+                        ? "border-r border-OneGreen/30"
+                        : index === 1
+                        ? "border-x-3 border-OneGreen"
+                        : "border-l border-OneGreen/30"
+                    }
+                  `}
+                >
+                  <span className={` w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100
+                      ${ activeTab === tab ? "text-black" : "text-OneGreen" }
+                    `}
+                  >
+                    [
+                  </span>
 
-              <button
-                className={`hover:cursor-pointer w-full h-full group flex items-center justify-center relative border-l border-OneGreen/30 transition-colors duration-300 ${getButtonClasses("skillscan")}`}
-                onClick={() => handleClickOption("skillscan")}
-              >
-                <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "skillscan" ? "text-black" : "text-OneGreen"}`}>[</span>
-                <span>Skill Scan</span>
-                <span className={`w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100 ${activeTab === "skillscan" ? "text-black" : "text-OneGreen"}`}>]</span>
-              </button>
+                  <span>
+                    {{
+                      golive: "Go Live",
+                      asciiIt: "IDK YET",
+                      skillscan: "Skill Scan",
+                    }[tab]}
+                  </span>
+
+                  <span className={` w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100
+                      ${
+                        activeTab === tab
+                          ? "text-black"
+                          : "text-OneGreen"
+                      }
+                    `}
+                  >
+                    ]
+                  </span>
+                </button>
+              ))}
+
             </div>
           </div>
         </fieldset>
@@ -66,7 +85,7 @@ function Projects() {
         </legend>
 
         <div className="flex flex-col w-full h-full">
-          {stacks[activeTab]} {/* WAY better  */}
+          {Stacks[activeTab]} {/* WAY better  */}
         </div>
       </fieldset>
 
