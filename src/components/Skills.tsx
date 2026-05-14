@@ -144,7 +144,7 @@ const skills: Skill[] = [
         <legend className="md:hidden block ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
           [2]Skills
         </legend>
-          <div className="grid grid-cols-3 gap-3 md:w-full p-2 pt-0 text-white md:h-full">
+        <div className="grid grid-cols-3 gap-3 md:w-full p-2 pt-0 text-white md:h-full">
           {skills.map((skill) => (
             <div
               key={skill.name}
