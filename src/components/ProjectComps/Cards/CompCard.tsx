@@ -1,6 +1,3 @@
-// will be using thie file in order to make the project components more module
-
-// import { GoLiveDesc, DNYET, SkillScanDesc}from "../ProjectConsts.ts"
 import { FaGithub  }from "react-icons/fa"
 import {type CompCardFooter} from "./Types.ts"
 
@@ -50,7 +47,6 @@ export function CompCard(content: CompContent) {
               </div>
             ))}
           </div>
-          {/* <p className="text-white p-2">{content.TechUsed}</p> */}
         </div>
       </div>
     </div>
