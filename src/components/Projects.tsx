@@ -53,7 +53,7 @@ function Projects() {
 
                   <span>
                     {{
-                      golive: "Go Live",
+                      golive: "GoLive!",
                       asciiIt: "IDK YET",
                       skillscan: "Skill Scan",
                     }[tab]}
