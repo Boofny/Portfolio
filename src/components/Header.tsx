@@ -3,7 +3,7 @@ import { useState } from "react"
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const defaultOffset = 80 // working for normal laptop and md screen
+  const defaultOffset = 65 // working for normal laptop and md screen
   const mobileSkillsOffset = 10 // edge case for mobile 
   const mobileAboutOffset = window.outerHeight // edge case for mobile
 

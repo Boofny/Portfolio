@@ -24,12 +24,12 @@ function Homepage() {
       </main>
 
         {/* Section 2*/}
-      <div className="2xl:px-30 md:px-15" id="projects">
+      <div className="2xl:px-30 md:px-10" id="projects">
         <Projects />
       </div>
 
         {/* Section 3*/}
-      <div className="flex flex-col md:flex-row items-stretch md:px-30 2xl:px-70 pt-7 md:pb-24" id="skills">
+      <div className="flex flex-col md:flex-row items-stretch md:px-25 2xl:px-70 pt-7 md:pb-24" id="skills">
         <Skills/>
         <Card title="[4]Experience" mobileTitle="[3]Experience">
           <Experience />

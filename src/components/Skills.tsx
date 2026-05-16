@@ -26,6 +26,8 @@ type Skill = {
 
 // NOTE: could do a cool if clicked explain how i use each skill like golang click and a card shows how i make backends with dbs and or frameworks
 const globalCSS = `
+  relative
+  group
   hover:cursor-pointer
   border
   bg-zinc-900
@@ -103,7 +105,7 @@ const skills: Skill[] = [
     `,
   },
   {
-    name: "TAILWIND",
+    name: "TailWindCss",
     icon: <SiTailwindcss />,
     styles: `
       border-zinc-700
@@ -113,7 +115,7 @@ const skills: Skill[] = [
     `,
   },
   {
-    name: "NEXTJS",
+    name: "NextJS",
     icon: <SiNextdotjs />,
     styles: `
       border-zinc-700
@@ -150,6 +152,17 @@ const skills: Skill[] = [
               key={skill.name}
               className={`${skill.styles} ${globalCSS}`}
             >
+              <span className="
+                absolute -top-7 left-1/2 -translate-x-1/2
+                font-hack text-sm text-zinc-300
+                bg-OneDarkGray border border-zinc-700 px-2 py-0.5 rounded-sm
+                opacity-0 group-hover:opacity-100
+                transition-opacity duration-150
+                whitespace-nowrap
+                pointer-events-none
+              ">
+                {skill.name}
+              </span>
               {skill.icon}
             </div>
           ))}

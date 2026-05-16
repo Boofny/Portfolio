@@ -78,14 +78,18 @@ function Projects() {
       </div>
 
       {/* Tech Stack fieldset — below on mobile, beside on desktop */}
-      {/*do NOT listen to the evil lsp*/}
+      {/* do NOT listen to the evil lsp */}
       <fieldset className="md:block hidden md:w-80 md:h-125 md:shrink-0 bg-OneDarkGray border-3 border-OneGreen flex flex-col rounded">
         <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
           [2]Overview
         </legend>
-
-        <div className="flex flex-col w-full h-full">
-          {Stacks[activeTab]} {/* WAY better  */}
+        <div className="flex flex-col w-full h-full items-center">
+          <div>
+            <h1 className="text-2xl font-header py-4 text-OneBlue">In Depth</h1>
+          </div>
+          <div>
+            {Stacks[activeTab]}
+          </div>
         </div>
       </fieldset>
 
