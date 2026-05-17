@@ -19,9 +19,17 @@ export function CompCard(content: CompContent) {
       <div className="w-full flex-1 flex flex-col md:flex-row min-h-0">
 
         {/* Image */}
-        <div className="w-full md:flex-1 h-48 md:h-full overflow-hidden">
+        <div className="w-full md:flex-1 h-48 md:h-80 overflow-hidden shrink-0">
           <img
-            className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300"
+            className="
+              w-full
+              h-full
+              object-cover
+              opacity-80
+              hover:opacity-100
+              transition-opacity
+              duration-300
+            "
             src={content.Image}
             alt={content.Name}
           />
@@ -29,7 +37,7 @@ export function CompCard(content: CompContent) {
 
         {/* Mobile description */}
         <div className="md:hidden border-t border-zinc-700 p-3">
-          <p className="text-zinc-400 font-hack text-sm leading-relaxed">{content.Description}</p>
+          <p className="text-zinc-300 font-hack text-sm leading-relaxed">{content.Description}</p>
         </div>
 
         {/* Right panel — stack + description */}
@@ -44,7 +52,7 @@ export function CompCard(content: CompContent) {
           {/* Description */}
           <div className="border-b border-zinc-700 p-4 flex-1">
             <p className="text-zinc-500 font-hack text-xs mb-1">// Specifications</p>
-            <div className="px-4 text-sm">
+            <div className="px-4 text-sm text-zinc-300">
               {content.Specifications.map((spec, index) => (
                 <li key={index}>{ spec }</li>
               ))}
@@ -55,8 +63,8 @@ export function CompCard(content: CompContent) {
           {/* Stack */}
           <div className="p-4 flex-1">
             <p className="text-OneYellow font-hack text-sm mb-3">
-              _Stack
-              <span className="animate-[blink_0.8s_step-start_infinite]">_</span>
+              ./Stack
+              {/* <span className=" border bg-OneYellow animate-[blink_0.8s_step-start_infinite]">_</span> */}
             </p>
             <div className="flex flex-col gap-1 grid grid-cols-3">
               {content.TechUsed.map((tech, index) => (
@@ -64,7 +72,7 @@ export function CompCard(content: CompContent) {
                   key={`${tech.techName}-${index}`}
                   className="flex items-center gap-1"
                 >
-                  <span className="text-zinc-600 font-hack text-md">$</span>
+                  <span className="text-zinc-500 font-hack text-md">$</span>
                   <span className="text-zinc-300 font-hack text-2xl">{tech.icon}</span>
                   <p className="text-zinc-300 font-hack border-zinc-200 border mx-1 rounded px-1 text-sm">{tech.techName}</p>
                 </div>
@@ -86,7 +94,7 @@ export function CompCard(content: CompContent) {
             rel="noopener noreferrer"
             aria-label="View repository"
           >
-            <FaGithub className="text-2xl text-zinc-500 group-hover:text-zinc-100 transition-colors duration-200" />
+            <FaGithub className="text-2xl text-zinc-300 group-hover:text-zinc-100 transition-colors duration-200" />
           </a>
         </div>
 

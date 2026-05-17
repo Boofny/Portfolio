@@ -53,7 +53,7 @@ const SkillScanTech: CompCardFooter[] = [
 ]
 
 const goliveSpecs: string[] = [
-  "Custom routing",
+  "Custom router",
   "Group routing",
   "Middleware",
 ]

@@ -6,7 +6,7 @@ import {Stacks} from "./ProjectComps/ProjectStack.tsx"
 type Tab = "golive" | "asciiIt" | "skillscan" 
 
 function Projects() {
-  const tabs: Tab[] = [ "golive", "asciiIt", "skillscan", ]
+  const tabs: Tab[] = [ "golive", "asciiIt", "skillscan"]
   const [activeTab, setActiveTab] = useState<Tab>("golive")
 
   const handleClickOption = (tab: Tab) => setActiveTab(tab)
@@ -15,7 +15,7 @@ function Projects() {
     activeTab === tab ? "bg-OneGreen text-black" : "bg-OneDarkGray"
 
   return (
-    <div className="w-full 2xl:w-15/16 2xl:pl-50 box-border flex flex-col md:flex-row justify-center items-stretch px-4 md:px-25 md:pt-20 gap-6 md:gap-20 py-6 md:overflow-hidden"> 
+    <div className="w-full 2xl:w-15/16 2xl:pl-50 box-border flex flex-col md:flex-row justify-center items-stretch px-4 md:px-25 md:pt-20 gap-6 md:gap-20 py-6 md:overflow-hidden">
       <div className="w-full flex justify-center items-center ">
         <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded h-full w-full md:w-full">
           <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
@@ -87,7 +87,7 @@ function Projects() {
           <div>
             <h1 className="text-2xl font-header py-4 text-OneBlue">In Depth</h1>
           </div>
-          <div>
+          <div className="flex justify-center items-center text-center px-5">
             {Stacks[activeTab]}
           </div>
         </div>
