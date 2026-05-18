@@ -7,7 +7,7 @@ interface CompContent {
   Image: string
   Repo: string
   Name: string
-  // Overview: string
+  Intro: string
   Specifications: string[],
 }
 
@@ -51,8 +51,8 @@ export function CompCard(content: CompContent) {
 
           {/* Description */}
           <div className="border-b border-zinc-700 p-4 flex-1">
-            <p className="text-zinc-500 font-hack text-xs mb-1">// Specifications</p>
-            <div className="px-4 text-sm text-zinc-300">
+            <p className="text-zinc-400 font-hack text-xs mb-1">// Specifications</p>
+            <div className="px-4 text-sm text-gray-300">
               {content.Specifications.map((spec, index) => (
                 <li key={index}>{ spec }</li>
               ))}
@@ -66,15 +66,15 @@ export function CompCard(content: CompContent) {
               ./Stack
               {/* <span className=" border bg-OneYellow animate-[blink_0.8s_step-start_infinite]">_</span> */}
             </p>
-            <div className="flex flex-col gap-1 grid grid-cols-3">
+            <div className="flex flex-col gap-1 grid grid-cols-2">
               {content.TechUsed.map((tech, index) => (
                 <div
                   key={`${tech.techName}-${index}`}
                   className="flex items-center gap-1"
                 >
-                  <span className="text-zinc-500 font-hack text-md">$</span>
+                  {/* <span className="text-zinc-500 font-hack text-md">$</span> */}
                   <span className="text-zinc-300 font-hack text-2xl">{tech.icon}</span>
-                  <p className="text-zinc-300 font-hack border-zinc-200 border mx-1 rounded px-1 text-sm">{tech.techName}</p>
+                  <p className="text-zinc-300 font-hack border-zinc-600 border mx-1 rounded px-1 text-sm">{tech.techName}</p>
                 </div>
               ))}
             </div>
@@ -99,13 +99,13 @@ export function CompCard(content: CompContent) {
         </div>
 
         {/* Tech pills - desktop / icon+name - mobile */}
-        <div className="flex-1 h-full flex items-center gap-2 px-4 overflow-x-auto md:justify-center">
+        <div className="flex-1 h-full flex items-center gap-2 px-4 md:justify-center flex-wrap">
         
           {/* Mobile: icon + name */}
           {content.TechUsed.map((tech, index) => (
             <div
               key={`${tech.techName}-${index}`}
-              className="md:hidden shrink-0 flex items-center gap-1"
+              className="md:hidden flex items-center gap-2"
             >
               <span className="text-zinc-300 text-xl">{tech.icon}</span>
               <span className="font-hack text-xs text-zinc-400">{tech.techName}</span>
@@ -124,7 +124,7 @@ export function CompCard(content: CompContent) {
 
           {/* Desktop: single overview */}
           <span className="hidden md:inline font-hack text-lg text-zinc-200 bg-zinc-900 border border-zinc-600 rounded px-2">
-            {content.TechUsed[0]?.descIntro}
+            {content.Intro}
           </span>
         </div>
       </div>

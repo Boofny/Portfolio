@@ -11,14 +11,14 @@ import {
 
 import {
   SiGo,
+  SiTailwindcss,
+  SiNextdotjs,
 } from "react-icons/si"
-
 // this file is the actuall contnennt in [1] pojects
 const GoLiveTech: CompCardFooter[] = [
   {
     techName: "Golang",
     icon: <SiGo className="text-cyan-400"/>,
-    descIntro: "Http frame work"
   },
 ]
 
@@ -26,36 +26,45 @@ const DNTECH: CompCardFooter[] = [
   {
     techName: "DN",
     icon: <FaGitAlt/>,
-    descIntro: "IDK"
   },
   {
     techName: "DN",
     icon: <FaGitAlt/>,
-    descIntro: "IDK"
   },
   {
     techName: "DN",
     icon: <FaGitAlt/>,
-    descIntro: "IDK"
   },
   {
     techName: "DN",
     icon: <FaGitAlt/>,
-    descIntro: "IDK"
   }
 ]
 const SkillScanTech: CompCardFooter[] = [
   {
-    techName: "skillllss",
-    icon: <FaReact/>,
-    descIntro: "Hackathon"
-  }
+    techName: "Gemini",
+    icon: <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/gemini-color.png" alt="gemini" className="w-6 h-6 object-cover my-1"/>
+  },
+  {
+    techName: "React",
+    icon: <FaReact className="text-cyan-300"/>,
+  },
+  {
+    techName: "NextJS",
+    icon: <SiNextdotjs />,
+  },
+  {
+    techName: "Tailwind",
+    icon: <SiTailwindcss className="text-sky-400"/>,
+  },
 ]
 
 const goliveSpecs: string[] = [
   "Custom router",
   "Group routing",
   "Middleware",
+  "Custom Logging",
+  "CORS handling"
 ]
 
 const SkilScanSpecs: string[] = [
@@ -74,12 +83,28 @@ export const CompStack = {
   golive: <CompCard 
   Specifications={goliveSpecs} 
   Name="GoLive!" 
+  Intro="Http frame work"
   Description={GoLiveDesc} 
   Image={goliveImage} 
   Repo={goliveRepo} 
   TechUsed={GoLiveTech}/>,
 
-  asciiIt: <CompCard Specifications={IDKSpecs} Name="DN" Description={DNYET} Image="asciiIt" Repo="http://github.com/Boofny" TechUsed={DNTECH}/>,
-  skillscan: <CompCard Specifications={SkilScanSpecs} Name="SkillSkann" Description={SkillScanDesc} Image="skillscan" Repo="http://github.com/Boofny" TechUsed={SkillScanTech}/>,
+  asciiIt: <CompCard 
+  Specifications={IDKSpecs} 
+  Name="DN" 
+  Intro="idk yet"
+  Description={DNYET} 
+  Image="asciiIt" 
+  Repo="http://github.com/Boofny" 
+  TechUsed={DNTECH}/>,
+
+  skillscan: <CompCard 
+  Specifications={SkilScanSpecs} 
+  Name="SkillScan" 
+  Intro="Hackathon project"
+  Description={SkillScanDesc} 
+  Image="skillscan" 
+  Repo="http://github.com/Boofny" 
+  TechUsed={SkillScanTech}/>,
   // slime: <CompCard Description="slimer" TechUsed="tech used" Image="skillscan" Repo="http://github.com/Boofny"/>,
 }
