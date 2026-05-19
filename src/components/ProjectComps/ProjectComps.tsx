@@ -65,14 +65,17 @@ const SkillScanTech: CompCardFooter[] = [
 const goliveSpecs: string[] = [
   "Custom router",
   "Group routing",
-  "Middleware",
+  "Middleware handling",
   "Custom Logging",
   "CORS handling"
 ]
 
 const SkilScanSpecs: string[] = [
-  "Using Gemini Api",
-  "placeholder",
+  "Gemini API powered",
+  "Bulk file analysis",
+  "Skill detection",
+  "Resume parsing",
+  "Candidate feedback",
 ]
 
 const IDKSpecs: string[] = [
@@ -104,10 +107,10 @@ export const CompStack = {
   skillscan: <CompCard 
   Specifications={SkilScanSpecs} 
   Name="SkillScan" 
-  Intro="AI powered resume analyzer"
+  Intro="AI Resume Analyzer"
   Description={SkillScanDesc} 
   Image={skillImage}
-  Repo="http://github.com/Boofny" 
+  Repo="https://github.com/Boofny/SkillScan" 
   TechUsed={SkillScanTech}/>,
   // slime: <CompCard Description="slimer" TechUsed="tech used" Image="skillscan" Repo="http://github.com/Boofny"/>,
 }

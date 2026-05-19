@@ -52,8 +52,8 @@ export function CompCard(content: CompContent) {
 
           {/* Description */}
           <div className="border-b border-zinc-700 p-4 flex-1">
-            <p className="text-OneYellow font-hack text-xs mb-1">## Specifications</p>
-            <div className="pl-7 text-sm text-OneWhite">
+            <p className="text-OneYellow font-hack text-md mb-1">{"> "}Specifications</p>
+            <div className="pl-8 text-sm text-OneWhite">
               {content.Specifications.map((spec, index) => (
                 <li key={index}>{ spec }</li>
               ))}

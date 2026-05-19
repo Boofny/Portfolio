@@ -24,7 +24,7 @@ function Homepage() {
       </main>
 
         {/* Section 2*/}
-      <div className="2xl:px-30 md:px-10" id="projects">
+      <div className="2xl:px-30 md:px-5" id="projects">
         <Projects />
       </div>
 
