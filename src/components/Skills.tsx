@@ -9,11 +9,11 @@ import {
 } from "react-icons/fa"
 
 import {
+  SiGnubash,
   SiGo,
   SiPostgresql,
   SiTailwindcss,
   SiNextdotjs,
-  SiAstro,
 } from "react-icons/si"
 
 function Skills(){
@@ -105,7 +105,7 @@ const skills: Skill[] = [
     `,
   },
   {
-    name: "TailWindCss",
+    name: "TailWindCSS",
     icon: <SiTailwindcss />,
     styles: `
       border-zinc-700
@@ -125,13 +125,13 @@ const skills: Skill[] = [
     `,
   },
   {
-    name: "Astro",
-    icon: <SiAstro />,
+    name: "Bash",
+    icon: <SiGnubash/>,
     styles: `
       border-zinc-700
-      hover:text-orange-400
-      hover:border-orange-400
-      hover:bg-orange-400/5
+      hover:text-green-400
+      hover:border-green-400
+      hover:bg-green-400/5
     `,
   },
 ]
