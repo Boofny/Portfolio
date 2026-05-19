@@ -1,9 +1,11 @@
 import { GoLiveDesc, DNYET, SkillScanDesc}from "./ProjectConsts.ts"
 import { CompCard  }from "./Cards/CompCard.tsx"
 import {type CompCardFooter} from "./Cards/Types.ts"
+import skillImage from "../../assets/SkillScanMob.png"
 
 const goliveImage = "https://neonxp.gallerycdn.vsassets.io/extensions/neonxp/gotools/0.1.5/1691451648679/Microsoft.VisualStudio.Services.Icons.Default"
 const goliveRepo = "https://github.com/Boofny/golive"
+
 import {
   FaReact,
   FaGitAlt,
@@ -17,8 +19,8 @@ import {
 // this file is the actuall contnennt in [1] pojects
 const GoLiveTech: CompCardFooter[] = [
   {
-    techName: "Golang",
-    icon: <SiGo className="text-cyan-400"/>,
+    techName: <span className="text-base">Golang</span>,
+    icon: <SiGo className="text-3xl text-cyan-400"/>,
   },
 ]
 
@@ -40,11 +42,8 @@ const DNTECH: CompCardFooter[] = [
     icon: <FaGitAlt/>,
   }
 ]
+
 const SkillScanTech: CompCardFooter[] = [
-  {
-    techName: "Gemini",
-    icon: <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/gemini-color.png" alt="gemini" className="w-6 h-6 object-cover my-1"/>
-  },
   {
     techName: "React",
     icon: <FaReact className="text-cyan-300"/>,
@@ -56,6 +55,10 @@ const SkillScanTech: CompCardFooter[] = [
   {
     techName: "Tailwind",
     icon: <SiTailwindcss className="text-sky-400"/>,
+  },
+  {
+    techName: "Gemini",
+    icon: <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/gemini-color.png" alt="gemini" className="md:w-6 md:h-6 w-5 h-5 object-cover md:pr-0 my-2"/>
   },
 ]
 
@@ -94,16 +97,16 @@ export const CompStack = {
   Name="DN" 
   Intro="idk yet"
   Description={DNYET} 
-  Image="asciiIt" 
+  Image="DN"
   Repo="http://github.com/Boofny" 
   TechUsed={DNTECH}/>,
 
   skillscan: <CompCard 
   Specifications={SkilScanSpecs} 
   Name="SkillScan" 
-  Intro="Hackathon project"
+  Intro="AI powered resume analyzer"
   Description={SkillScanDesc} 
-  Image="skillscan" 
+  Image={skillImage}
   Repo="http://github.com/Boofny" 
   TechUsed={SkillScanTech}/>,
   // slime: <CompCard Description="slimer" TechUsed="tech used" Image="skillscan" Repo="http://github.com/Boofny"/>,

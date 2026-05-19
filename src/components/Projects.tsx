@@ -87,7 +87,7 @@ function Projects() {
           <div>
             <h1 className="text-2xl font-header py-4 text-OneBlue">In Depth</h1>
           </div>
-          <div className="flex justify-center items-center text-center px-5">
+          <div className="flex justify-center items-center px-5">
             {Stacks[activeTab]}
           </div>
         </div>

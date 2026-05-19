@@ -13,18 +13,19 @@ interface CompContent {
 
 export function CompCard(content: CompContent) {
   return (
-    <div className="w-full h-full bg-OneDarkGray flex flex-col border border-zinc-700">
+    <div className="w-full h-full bg-OneDarkGray flex flex-col border border-zinc-700 rounded">
 
       {/* Main content area */}
       <div className="w-full flex-1 flex flex-col md:flex-row min-h-0">
 
         {/* Image */}
-        <div className="w-full md:flex-1 h-48 md:h-80 overflow-hidden shrink-0">
+        <div className="w-full md:flex-1 h-48 md:h-83 overflow-hidden shrink-0 p-0">
           <img
             className="
               w-full
               h-full
               object-cover
+              object-center
               opacity-80
               hover:opacity-100
               transition-opacity
@@ -45,14 +46,14 @@ export function CompCard(content: CompContent) {
 
           {/* Project name header */}
           <div className="border-b border-zinc-700 px-4 py-2 flex items-center gap-2">
-            <span className="text-zinc-400 font-hack text-xs">~/projects/</span>
+            <span className="text-zinc-400 font-hack text-xs">project:</span>
             <span className="text-OneYellow font-hack text-sm">{content.Name}</span>
           </div>
 
           {/* Description */}
           <div className="border-b border-zinc-700 p-4 flex-1">
-            <p className="text-zinc-400 font-hack text-xs mb-1">// Specifications</p>
-            <div className="px-4 text-sm text-gray-300">
+            <p className="text-OneYellow font-hack text-xs mb-1">## Specifications</p>
+            <div className="pl-7 text-sm text-OneWhite">
               {content.Specifications.map((spec, index) => (
                 <li key={index}>{ spec }</li>
               ))}
@@ -84,44 +85,34 @@ export function CompCard(content: CompContent) {
       </div>
 
       {/* Footer bar */}
-      <div className="bg-OneLightGray w-full h-14 flex shrink-0 border-t border-zinc-700 ">
+      <div className="bg-OneLightGray w-full md:h-14 h-18 flex shrink-0 border-t border-zinc-700">
 
         {/* GitHub link */}
-        <div className="w-14 shrink-0 h-full border-r border-zinc-700 flex items-center justify-center group">
+        <div className="md:w-14 w-18 shrink-0 h-full border-r border-zinc-700 flex items-center justify-center group mr-1.5 md:mr-0">
          <a 
             href={content.Repo}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View repository"
           >
-            <FaGithub className="text-2xl text-zinc-300 group-hover:text-zinc-100 transition-colors duration-200" />
+            <FaGithub className="text-3xl text-zinc-300 group-hover:text-zinc-100 transition-colors duration-200" />
           </a>
         </div>
 
         {/* Tech pills - desktop / icon+name - mobile */}
-        <div className="flex-1 h-full flex items-center gap-2 px-4 md:justify-center flex-wrap">
+        {/* <div className="flex-1 h-full flex items-center px-4 md:justify-center flex-wrap grid grid-cols-2"> */}
+        <div className="flex-1 h-full grid grid-cols-2 px-4 md:pt-0 pt-2 md:flex md:justify-center md:items-center">
         
           {/* Mobile: icon + name */}
           {content.TechUsed.map((tech, index) => (
             <div
               key={`${tech.techName}-${index}`}
-              className="md:hidden flex items-center gap-2"
+              className="md:hidden flex items-center gap-x-2"
             >
               <span className="text-zinc-300 text-xl">{tech.icon}</span>
               <span className="font-hack text-xs text-zinc-400">{tech.techName}</span>
             </div>
           ))}
-        
-          {/* Desktop: pills */}
-          {/* {content.TechUsed.map((tech, index) => ( */}
-          {/*   <span */}
-          {/*     key={`${tech.techName}-${index}`} */}
-          {/*     className="hidden md:inline shrink-0 font-hack text-lg text-zinc-200 border border-zinc-700 bg-zinc-900 px-2 rounded-sm" */}
-          {/*   > */}
-          {/*     {tech.descIntro} */}
-          {/*   </span> */}
-          {/* ))} */}
-
           {/* Desktop: single overview */}
           <span className="hidden md:inline font-hack text-lg text-zinc-200 bg-zinc-900 border border-zinc-600 rounded px-2">
             {content.Intro}
