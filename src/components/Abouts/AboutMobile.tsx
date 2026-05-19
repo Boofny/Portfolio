@@ -8,7 +8,7 @@ function AboutMobile(){
         </legend>
 
         {/* Mobile: plain card */}
-        <div className="md:hidden p-4 font-hack text-gray-300 leading-relaxed space-y-3">
+        <div className="md:hidden px-4 py-2 pt-1 font-hack text-gray-300 leading-relaxed space-y-3">
           {/* <p>Hi, I'm Brandon Romero.</p> */}
           {/* <p>about-me content here...</p> */}
           {AboutMe}

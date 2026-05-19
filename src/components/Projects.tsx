@@ -16,14 +16,14 @@ function Projects() {
 
   return (
     <div className="w-full 2xl:w-15/16 2xl:pl-50 box-border flex flex-col md:flex-row justify-center items-stretch px-4 md:px-25 md:pt-20 gap-6 md:gap-20 py-6 md:overflow-hidden">
-      <div className="w-full flex justify-center items-center ">
+      <div className="w-full flex justify-center items-center">
         <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded h-full w-full md:w-full">
           <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
             [1]Projects
           </legend>
           <div className="flex flex-col w-full h-full">
             {/* Project content */}
-            <div className="flex-1 text-white flex justify-center items-center p-2">
+            <div className="flex-1 text-white flex justify-center items-center p-2 pt-0">
               {CompStack[activeTab]} {/* WAY better  */}
             </div>
             <div className="w-full h-15 flex justify-center items-center text-white font-bold font-hack border-t-3 border-OneGreen md:text-lg text-md">
