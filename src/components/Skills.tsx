@@ -22,6 +22,7 @@ type Skill = {
   name: string
   icon: ReactElement
   styles: string
+  link: string
 }
 
 // NOTE: could do a cool if clicked explain how i use each skill like golang click and a card shows how i make backends with dbs and or frameworks
@@ -53,6 +54,7 @@ const skills: Skill[] = [
       hover:border-cyan-400
       hover:bg-cyan-400/5
     `,
+    link: "https://go.dev/"
   },
   {
     name: "Java",
@@ -63,6 +65,7 @@ const skills: Skill[] = [
       hover:border-red-500
       hover:bg-red-500/5
     `,
+    link: "https://www.java.com/en/"
   },
   {
     name: "React",
@@ -73,6 +76,7 @@ const skills: Skill[] = [
       hover:border-cyan-300
       hover:bg-cyan-300/5
     `,
+    link: "https://react.dev/"
   },
   {
     name: "Postgresql",
@@ -83,6 +87,7 @@ const skills: Skill[] = [
       hover:border-blue-400
       hover:bg-blue-400/5
     `,
+    link: "https://www.postgresql.org/"
   },
   {
     name: "Git",
@@ -93,6 +98,7 @@ const skills: Skill[] = [
       hover:border-orange-500
       hover:bg-orange-500/5
     `,
+    link: "https://git-scm.com/"
   },
   {
     name: "Linux",
@@ -103,6 +109,7 @@ const skills: Skill[] = [
       hover:border-white
       hover:bg-white/50
     `,
+    link: "https://github.com/torvalds/linux"
   },
   {
     name: "TailWindCSS",
@@ -113,6 +120,7 @@ const skills: Skill[] = [
       hover:border-sky-400
       hover:bg-sky-400/5
     `,
+    link: "https://tailwindcss.com/"
   },
   {
     name: "NextJS",
@@ -123,6 +131,7 @@ const skills: Skill[] = [
       hover:border-white
       hover:bg-white/50
     `,
+    link: "https://nextjs.org/"
   },
   {
     name: "Bash",
@@ -133,6 +142,7 @@ const skills: Skill[] = [
       hover:border-green-400
       hover:bg-green-400/5
     `,
+    link: "https://en.wikipedia.org/wiki/Bash_(Unix_shell)"
   },
 ]
 
@@ -147,25 +157,24 @@ const skills: Skill[] = [
           [2]Skills
         </legend>
         <div className="grid grid-cols-3 gap-3 md:w-full p-2 pt-0 text-white md:h-full">
-          {skills.map((skill) => (
-            <div
-              key={skill.name}
-              className={`${skill.styles} ${globalCSS}`}
-            >
-              <span className="
-                absolute -top-7 left-1/2 -translate-x-1/2
-                font-hack text-sm text-zinc-300
-                bg-OneDarkGray border border-zinc-700 px-2 py-0.5 rounded-sm
-                opacity-0 group-hover:opacity-100
-                transition-opacity duration-150
-                whitespace-nowrap
-                pointer-events-none
-              ">
-                {skill.name}
-              </span>
-              {skill.icon}
-            </div>
-          ))}
+            {skills.map((skill) => (
+              <a key={skill.name} className={`${skill.styles} ${globalCSS}`} href={skill.link} target="_blank" rel="noopener noreferrer"
+              >
+                <span className="
+                  absolute -top-7 left-1/2 -translate-x-1/2
+                  font-hack text-sm text-zinc-300
+                  bg-OneDarkGray border border-zinc-700 px-2 py-0.5 rounded-sm
+                  opacity-0 group-hover:opacity-100
+                  transition-opacity duration-150
+                  whitespace-nowrap
+                  pointer-events-none
+                ">
+                  {skill.name}
+                </span>
+                  {skill.icon}
+                {/* <a href="https://github.com/Boofny" target="_blank" rel="noopener noreferrer">{skill.icon}</a> */}
+              </a>
+            ))}
         </div>
       </fieldset>
     </div>
