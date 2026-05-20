@@ -110,7 +110,7 @@ export const CompStack = {
   Intro="AI Resume Analyzer"
   Description={SkillScanDesc} 
   Image={skillImage}
-  Repo="https://github.com/Boofny/SkillScan" 
+  Repo="https://skill-scan-six.vercel.app/" 
   TechUsed={SkillScanTech}/>,
   // slime: <CompCard Description="slimer" TechUsed="tech used" Image="skillscan" Repo="http://github.com/Boofny"/>,
 }
