@@ -38,7 +38,7 @@ export function CompCard(content: CompContent) {
 
         {/* Mobile description */}
         <div className="md:hidden border-t border-zinc-700 p-3">
-          <p className="text-zinc-300 font-hack text-sm leading-relaxed">{content.Description}</p>
+          <p className="text-zinc-300 font-hack text-xs font-semibold leading-relaxed">{content.Description}</p>
         </div>
 
         {/* Right panel — stack + description */}
