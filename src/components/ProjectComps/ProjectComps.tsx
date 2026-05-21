@@ -89,7 +89,7 @@ export const CompStack = {
   golive: <CompCard 
   Specifications={goliveSpecs} 
   Name="GoLive!" 
-  Intro="Http frame work"
+  Intro="Http Framework"
   Description={GoLiveDesc} 
   Image={goliveImage} 
   Repo={goliveRepo} 

@@ -19,7 +19,7 @@ export function CompCard(content: CompContent) {
       <div className="w-full flex-1 flex flex-col md:flex-row min-h-0">
 
         {/* Image */}
-        <div className="w-full md:flex-1 h-48 md:h-83 overflow-hidden shrink-0 p-0">
+        <div className="w-full md:flex-1 h-48 md:h-85 overflow-hidden shrink-0 p-0">
           <img
             className="
               w-full
@@ -84,6 +84,7 @@ export function CompCard(content: CompContent) {
         </div>
       </div>
 
+      {/* Intro bar for mobile */}
       {/* Footer bar */}
       <div className="bg-OneLightGray w-full md:h-14 h-18 flex shrink-0 border-t border-zinc-700">
 
@@ -101,6 +102,7 @@ export function CompCard(content: CompContent) {
 
         {/* Tech pills - desktop / icon+name - mobile */}
         {/* <div className="flex-1 h-full flex items-center px-4 md:justify-center flex-wrap grid grid-cols-2"> */}
+        
         <div className="flex-1 h-full grid grid-cols-2 px-4 md:pt-0 pt-2 md:flex md:justify-center md:items-center">
         
           {/* Mobile: icon + name */}
@@ -118,6 +120,11 @@ export function CompCard(content: CompContent) {
             {content.Intro}
           </span>
         </div>
+      </div>
+      <div className="md:hidden font-hack flex bg-OneLightGray w-full h-8 justify-center items-center pt-2 border-t border-zinc-700">
+        <p className="font-hack text-sm text-zinc-200 bg-zinc-900 border border-zinc-600 rounded px-2">
+        {content.Intro}
+        </p>
       </div>
     </div>
   )
