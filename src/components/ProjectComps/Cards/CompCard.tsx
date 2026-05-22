@@ -41,6 +41,10 @@ export function CompCard(content: CompContent) {
           <p className="text-zinc-300 font-hack text-xs font-semibold leading-relaxed">{content.Description}</p>
         </div>
 
+        <div className="md:hidden font-hack flex bg-OneLightGray ml-auto w-1/4 h-4 justify-center items-center border border-b-0 border-zinc-700 rounded-tl border-r-0">
+          <p className="text-sm text-OneYellow font-semibold">Stack</p>
+        </div>
+
         {/* Right panel — stack + description */}
         <div className="hidden md:flex flex-col border-l border-zinc-700 w-72 shrink-0">
 
@@ -63,8 +67,8 @@ export function CompCard(content: CompContent) {
 
           {/* Stack */}
           <div className="p-4 flex-1">
-            <p className="text-OneYellow font-hack text-sm mb-3">
-              ./Stack
+            <p className="text-OneYellow font-hack text-md mb-3">
+            {"> "}Stack
               {/* <span className=" border bg-OneYellow animate-[blink_0.8s_step-start_infinite]">_</span> */}
             </p>
             <div className="flex flex-col gap-1 grid grid-cols-2">
@@ -88,7 +92,7 @@ export function CompCard(content: CompContent) {
       {/* Footer bar */}
       <div className="bg-OneLightGray w-full md:h-14 h-18 flex shrink-0 border-t border-zinc-700">
 
-        {/* GitHub link */}
+        {/* GitHub link -------------------------------------------------------*/}
         <div className="md:w-14 w-18 shrink-0 h-full border-r border-zinc-700 flex items-center justify-center group mr-1.5 md:mr-0">
          <a 
             href={content.Repo}
@@ -99,6 +103,7 @@ export function CompCard(content: CompContent) {
             <FaGithub className="text-3xl text-zinc-300 group-hover:text-zinc-100 transition-colors duration-200" />
           </a>
         </div>
+        {/* GitHub link -------------------------------------------------------*/}
 
         {/* Tech pills - desktop / icon+name - mobile */}
         {/* <div className="flex-1 h-full flex items-center px-4 md:justify-center flex-wrap grid grid-cols-2"> */}
@@ -121,11 +126,11 @@ export function CompCard(content: CompContent) {
           </span>
         </div>
       </div>
-      <div className="md:hidden font-hack flex bg-OneLightGray w-full h-8 justify-center items-center pt-2 border-t border-zinc-700">
-        <p className="font-hack text-sm text-zinc-200 bg-zinc-900 border border-zinc-600 rounded px-2">
-        {content.Intro}
-        </p>
-      </div>
+      {/* <div className="md:hidden font-hack flex bg-OneLightGray w-full h-8 justify-center items-center pt-2 border-t border-zinc-700"> */}
+      {/*   <p className="font-hack text-sm text-zinc-200 bg-zinc-900 border border-zinc-600 rounded px-2"> */}
+      {/*   {content.Intro} */}
+      {/*   </p> */}
+      {/* </div> */}
     </div>
   )
 }
