@@ -1,8 +1,12 @@
 import type { ReactElement } from "react"
 
 export type CompCardFooter = {
-  techName: string | ReactElement,
-  icon: ReactElement,
-  // descIntro: string,
-  // icon: string, // string for now 
+  TechName: string | ReactElement,
+  Icon: ReactElement,
+  // Links: ProjectLinks
+}
+
+export type ProjectLinks = {
+  GitHubLink?: string 
+  WebsiteLink?: string
 }

@@ -19,46 +19,46 @@ import {
 // this file is the actuall contnennt in [1] pojects
 const GoLiveTech: CompCardFooter[] = [
   {
-    techName: <span className="text-base">Golang</span>,
-    icon: <SiGo className="text-3xl text-cyan-400"/>,
+    TechName: <span className="text-base">Golang</span>,
+    Icon: <SiGo className="text-3xl text-cyan-400"/>,
   },
 ]
 
 const DNTECH: CompCardFooter[] = [
   {
-    techName: "DN",
-    icon: <FaGitAlt/>,
+    TechName: "DN",
+    Icon: <FaGitAlt/>,
   },
   {
-    techName: "DN",
-    icon: <FaGitAlt/>,
+    TechName: "DN",
+    Icon: <FaGitAlt/>,
   },
   {
-    techName: "DN",
-    icon: <FaGitAlt/>,
+    TechName: "DN",
+    Icon: <FaGitAlt/>,
   },
   {
-    techName: "DN",
-    icon: <FaGitAlt/>,
+    TechName: "DN",
+    Icon: <FaGitAlt/>,
   }
 ]
 
 const SkillScanTech: CompCardFooter[] = [
   {
-    techName: "React",
-    icon: <FaReact className="text-cyan-300"/>,
+    TechName: "React",
+    Icon: <FaReact className="text-cyan-300"/>,
   },
   {
-    techName: "NextJS",
-    icon: <SiNextdotjs />,
+    TechName: "NextJS",
+    Icon: <SiNextdotjs />,
   },
   {
-    techName: "Tailwind",
-    icon: <SiTailwindcss className="text-sky-400"/>,
+    TechName: "Tailwind",
+    Icon: <SiTailwindcss className="text-sky-400"/>,
   },
   {
-    techName: "Gemini",
-    icon: <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/gemini-color.png" alt="gemini" className="md:w-6 md:h-6 w-5 h-5 object-cover md:pr-0 my-2"/>
+    TechName: "Gemini",
+    Icon: <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/gemini-color.png" alt="gemini" className="md:w-6 md:h-6 w-5 h-5 object-cover md:pr-0 my-2"/>
   },
 ]
 
@@ -92,7 +92,9 @@ export const CompStack = {
   Intro="Http Framework"
   Description={GoLiveDesc} 
   Image={goliveImage} 
-  Repo={goliveRepo} 
+  Links={
+    {GitHubLink: goliveRepo}
+  } 
   TechUsed={GoLiveTech}/>,
 
   asciiIt: <CompCard 
@@ -101,7 +103,9 @@ export const CompStack = {
   Intro="idk yet"
   Description={DNYET} 
   Image="DN"
-  Repo="http://github.com/Boofny" 
+  Links={{
+    GitHubLink: "http://github.com/Boofny", WebsiteLink: "http://github.com/Boofny"
+  }}
   TechUsed={DNTECH}/>,
 
   skillscan: <CompCard 
@@ -110,7 +114,9 @@ export const CompStack = {
   Intro="AI Resume Analyzer"
   Description={SkillScanDesc} 
   Image={skillImage}
-  Repo="https://skill-scan-six.vercel.app/" 
+  Links={{
+    GitHubLink: "https://github.com/Boofny/SkillScan", WebsiteLink: "https://skill-scan-six.vercel.app/"
+  }}
   TechUsed={SkillScanTech}/>,
   // slime: <CompCard Description="slimer" TechUsed="tech used" Image="skillscan" Repo="http://github.com/Boofny"/>,
 }
