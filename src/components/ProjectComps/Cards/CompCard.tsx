@@ -1,11 +1,11 @@
-import { FaGithub, FaLink} from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
 import { type CompCardFooter, type ProjectLinks} from "./Types.ts"
+import { IoIosLink } from "react-icons/io";
 
 interface CompContent {
   Description: string
   TechUsed: CompCardFooter[]
   Image: string
-  // Repo: string
   Name: string
   Intro: string
   Links: ProjectLinks
@@ -114,65 +114,68 @@ export function CompCard(content: CompContent) {
           </p>
         </div>
       </div>
-
       {/* Intro bar for mobile */}
       {/* Footer bar */}
-      <div className="bg-OneLightGray w-full md:h-14 h-18 flex shrink-0 border-t border-zinc-700">
+      <div className="bg-OneLightGray w-full md:h-14 h-18 flex shrink-0 border-t border-b border-zinc-700">
 
-        {/* GitHub link -------------------------------------------------------*/}
-        {/* <div className="md:w-14 w-18 shrink-0 h-full border-r border-zinc-700 flex items-center justify-center group mr-1.5 md:mr-0"> */}
+        {/* NOTE: old github links -------------------------------------------------------*/}
+        {/* <div className="md:w-14 w-18 shrink-0 h-full border-r border-zinc-700 flex items-center justify-center group mr-1.5 md:mr-0 gap-2"> */}
         {/*  <a  */}
         {/*     href={content.Links.GitHubLink} */}
         {/*     target="_blank" */}
         {/*     rel="noopener noreferrer" */}
         {/*     aria-label="View repository" */}
         {/*   > */}
-        {/*     <FaGithub className="text-3xl text-zinc-300 group-hover:text-zinc-100 transition-colors duration-200" /> */}
+        {/*     <FaGithub className="md:text-3xl text-2xl text-zinc-300 group-hover:text-zinc-100 transition-colors duration-200" /> */}
         {/*   </a> */}
-        {/*  <a  */}
-        {/*     href={content.Links.WebsiteLink} */}
-        {/*     target="_blank" */}
-        {/*     rel="noopener noreferrer" */}
-        {/*     aria-label="View repository" */}
-        {/*   > */}
-        {/*     <FaLink className="text-1xl text-zinc-300 group-hover:text-zinc-100 transition-colors duration-200" /> */}
-        {/*   </a> */}
+        {/*     {content.Links.WebsiteLink && ( */}
+        {/*       <a  */}
+        {/*         href={content.Links.WebsiteLink} */}
+        {/*         target="_blank" */}
+        {/*         rel="noopener noreferrer" */}
+        {/*         aria-label="View website" */}
+        {/*       > */}
+        {/*         <FaLink className="text-xl text-zinc-300 hover:text-zinc-100 transition-colors duration-200" /> */}
+        {/*       </a> */}
+        {/*     )} */}
         {/* </div> */}
-        {/**/}
+
+        <div className="
+          shrink-0
+          h-full
+          border-r
+          border-zinc-700
+          flex
+          items-center
+          justify-center
+          gap-2
+          px-2
+        ">
+          <a
+            href={content.Links.GitHubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View repository"
+          >
+            <FaGithub className="mx-2 text-3xl md:text-3xl text-zinc-300 hover:text-zinc-100 transition-colors duration-200" />
+          </a>
+
+          {content.Links.WebsiteLink && (
+            <a
+              href={content.Links.WebsiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View website"
+            >
+              <IoIosLink className="mx-2 text-2xl text-zinc-300 hover:text-zinc-100 transition-colors duration-200" />
+            </a>
+          )}
+        </div>
+
         {/* GitHub link -------------------------------------------------------*/}
-<div className="bg-OneLightGray w-full md:h-14 h-18 flex shrink-0 border-t border-zinc-700">
-
-  <div className="shrink-0 h-full border-r border-zinc-700 flex items-center justify-center gap-3 px-4">
-
-    {/* GitHub */}
-    <a 
-      href={content.Links.GitHubLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="View repository"
-    >
-      <FaGithub className="text-3xl text-zinc-300 hover:text-zinc-100 transition-colors duration-200" />
-    </a>
-
-    {/* Website */}
-    {content.Links.WebsiteLink && (
-      <a 
-        href={content.Links.WebsiteLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="View website"
-      >
-        <FaLink className="text-xl text-zinc-300 hover:text-zinc-100 transition-colors duration-200" />
-      </a>
-    )}
-
-  </div>
-
-</div>
         {/* Tech pills - desktop / icon+name - mobile */}
-        {/* <div className="flex-1 h-full flex items-center px-4 md:justify-center flex-wrap grid grid-cols-2"> */}
         
-        <div className="flex-1 h-full grid grid-cols-2 px-4 md:pt-0 pt-2 md:flex md:justify-center md:items-center">
+        <div className="flex-1 h-full grid grid-cols-2 pl-6 px-4 md:pt-0 pt-2 md:flex md:justify-center md:items-center">
         
           {/* Mobile: icon + name */}
           {content.TechUsed.map((tech, index) => (
@@ -190,11 +193,6 @@ export function CompCard(content: CompContent) {
           </span>
         </div>
       </div>
-      {/* <div className="md:hidden font-hack flex bg-OneLightGray w-full h-8 justify-center items-center pt-2 border-t border-zinc-700"> */}
-      {/*   <p className="font-hack text-sm text-zinc-200 bg-zinc-900 border border-zinc-600 rounded px-2"> */}
-      {/*   {content.Intro} */}
-      {/*   </p> */}
-      {/* </div> */}
     </div>
   )
 }
