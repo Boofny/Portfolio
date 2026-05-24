@@ -38,7 +38,7 @@ export function CompCard(content: CompContent) {
         </div>
 
         {/* Mobile description */}
-        <div className="md:hidden border-t border-zinc-700 p-3">
+        <div className="md:hidden border-t border-zinc-700 p-3 pb-0">
           <p className="text-zinc-300 font-hack text-xs font-semibold leading-relaxed">{content.Description}</p>
         </div>
 
@@ -85,11 +85,6 @@ export function CompCard(content: CompContent) {
         </div>
       </div>
 
-      {/* NOTE: old version with bottom border  */}
-      {/* <div className="md:hidden font-hack flex bg-OneLightGray ml-auto w-1/4 h-4 justify-center items-center border border-b-0 border-zinc-700 rounded-tl border-r-0"> */}
-      {/*   <p className="text-sm text-OneYellow font-semibold">Stack</p> */}
-      {/* </div> */}
-
       {/* NOTE: new tab with merged border  */}
       <div className="relative md:hidden flex justify-end">
         <div className="
@@ -114,6 +109,7 @@ export function CompCard(content: CompContent) {
           </p>
         </div>
       </div>
+
       {/* Intro bar for mobile */}
       {/* Footer bar */}
       <div className="bg-OneLightGray w-full md:h-14 h-18 flex shrink-0 border-t border-b border-zinc-700">
