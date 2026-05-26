@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa"
+import { FaGithub, FaDocker} from "react-icons/fa"
 import { type CompCardFooter, type ProjectLinks} from "./Types.ts"
 import { IoIosLink } from "react-icons/io";
 
@@ -164,6 +164,16 @@ export function CompCard(content: CompContent) {
               aria-label="View website"
             >
               <IoIosLink className="mx-2 text-2xl text-zinc-300 hover:text-zinc-100 transition-colors duration-200" />
+            </a>
+          )}
+          {content.Links.Docker&& (
+            <a
+              href={content.Links.WebsiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View website"
+            >
+              <FaDocker className="md:block hidden mx-2 text-3xl md:text-3xl text-zinc-300 hover:text-zinc-100 transition-colors duration-200" />
             </a>
           )}
         </div>

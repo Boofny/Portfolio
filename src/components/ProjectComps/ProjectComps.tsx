@@ -93,7 +93,9 @@ export const CompStack = {
   Description={GoLiveDesc} 
   Image={goliveImage} 
   Links={
-    {GitHubLink: goliveRepo}
+    {GitHubLink: goliveRepo, 
+      Docker: "id",  // goiing to add a readme file to the example in golive with the docker file and will have a one liner docker for the image on docker hub
+      WebsiteLink: "https://github.com/Boofny"} // for now its just my github before i get the api up and running 
   } 
   TechUsed={GoLiveTech}/>,
 
@@ -104,7 +106,7 @@ export const CompStack = {
   Description={DNYET} 
   Image="DN"
   Links={{
-    GitHubLink: "http://github.com/Boofny", WebsiteLink: "http://github.com/Boofny"
+    GitHubLink: "http://github.com/Boofny", WebsiteLink: "https://github.com/Boofny"
   }}
   TechUsed={DNTECH}/>,
 

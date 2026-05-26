@@ -8,4 +8,5 @@ export type CompCardFooter = {
 export type ProjectLinks = {
   GitHubLink?: string 
   WebsiteLink?: string
+  Docker?: string
 }
