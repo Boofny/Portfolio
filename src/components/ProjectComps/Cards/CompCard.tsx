@@ -168,7 +168,7 @@ export function CompCard(content: CompContent) {
           )}
           {content.Links.Docker&& (
             <a
-              href={content.Links.WebsiteLink}
+              href={content.Links.Docker}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View website"
