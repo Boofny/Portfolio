@@ -12,7 +12,6 @@ function Homepage() {
     <div className="m-0 flex flex-col">
       <Header></Header>
       <main className="pt-15 w-full flex justify-center items-center">
-        {/*Dont know how much i like nothaving other components visible but we will see*/}
         <div className="flex flex-col md:flex-row justify-center items-center w-full px-4 md:px-0 pt-5"> 
           <HeaderPicture />
           {/* Section 1 */}
@@ -32,7 +31,8 @@ function Homepage() {
       <div className="flex flex-col md:flex-row items-stretch md:px-25 2xl:px-70 pt-7 md:pb-24" id="skills">
         <Skills/>
         <Card title="[4]Experience" mobileTitle="[3]Experience">
-          <Experience />
+          {/* thinking of getting rid of this in place of having something like a contact me or  */}
+          <Experience /> 
         </Card>
       </div>
     </div>
