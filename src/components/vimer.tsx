@@ -2,12 +2,10 @@ import {useRef, useState} from "react";
 import { AboutMe }from "./ProjectComps/ProjectConsts.ts"
 
 const buffer: string[] = [
-  // "Hello All",
-  "",
-  ...AboutMe.match(/.{1,40}/g)!, // splits every 40 chars
-  "hjkl to move around",
+  "## Use hjkl to move around!",
   "",
   "",
+  ...AboutMe.match(/.{1,45}/g)!, // splits every 40 chars
   "",
   "",
   "",
