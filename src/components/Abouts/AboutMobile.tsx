@@ -1,4 +1,4 @@
-import { AboutMe } from "../ProjectComps/ProjectConsts.ts"
+import { AboutMeMobile } from "../ProjectComps/ProjectConsts.ts"
 function AboutMobile(){
   return(
     <div className="w-full pb-10 flex justify-center items-center pt-5 md:hidden block">
@@ -11,7 +11,7 @@ function AboutMobile(){
         <div className="md:hidden px-4 py-2 pt-1 font-hack text-gray-300 leading-relaxed space-y-3">
           {/* <p>Hi, I'm Brandon Romero.</p> */}
           {/* <p>about-me content here...</p> */}
-          {AboutMe}
+          {AboutMeMobile}
         </div>
       </fieldset>
     </div>
