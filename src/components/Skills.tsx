@@ -2,7 +2,7 @@
 import type { ReactElement } from "react"
 
 import {
-  FaJava,
+  FaDocker,
   FaReact,
   FaGitAlt,
   FaLinux,
@@ -57,13 +57,13 @@ const skills: Skill[] = [
     link: "https://go.dev/"
   },
   {
-    name: "Java",
-    icon: <FaJava />,
+    name: "Docker",
+    icon: <FaDocker/>,
     styles: `
       border-zinc-700
-      hover:text-red-500
-      hover:border-red-500
-      hover:bg-red-500/5
+      hover:text-blue-600
+      hover:border-blue-600
+      hover:bg-blue-600/5
     `,
     link: "https://www.java.com/en/"
   },
