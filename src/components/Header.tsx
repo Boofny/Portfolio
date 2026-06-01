@@ -7,8 +7,16 @@ function Header() {
   const mobileSkillsOffset = 10 // edge case for mobile 
   const mobileAboutOffset = window.outerHeight // edge case for mobile
 
+  const HomeButton = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+
   const scrollToSection = (id: string, offset: number) => {
     const section = document.getElementById(id)
+    console.log(Math.round(mobileAboutOffset/6))
   
     if (!section) return
   
@@ -27,7 +35,8 @@ function Header() {
     <div className="bg-OneDarkGray fixed top-0 left-0 right-0 h-15 flex items-center border-b-2 border-OneGreen z-50">
 
       {/* Logo */}
-      <button className="ease-in-out duration-300 text-OneGreen text-4xl shrink-0 border-3 border-OneGreen w-15 h-15 flex justify-center items-center rounded font-bold p-1 hover:bg-OneGreen hover:text-black font-display">
+
+      <button onClick={HomeButton} className="ease-in-out duration-300 text-OneGreen text-4xl shrink-0 border-3 border-OneGreen w-15 h-15 flex justify-center items-center font-bold p-1 hover:bg-OneGreen hover:text-black font-display">
         {">_"}
       </button>
 
@@ -78,7 +87,7 @@ function Header() {
       {/* Mobile Menu — stays fixed for a dropdown */}
       <div className={`md:hidden fixed top-15 right-0 w-64 bg-OneDarkGray border-l-2 border-b-2 border-OneGreen transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex flex-col p-4 gap-2 font-hack">
-          <button onClick={() => {setIsOpen(false) ; scrollToSection("about", mobileAboutOffset)}} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
+          <button onClick={() => {setIsOpen(false) ; scrollToSection("about", Math.round(mobileAboutOffset/6))}} className="hover:cursor-pointer px-4 py-3 text-OneGreen font-hack group flex items-center relative border-b border-OneGreen/30">
             <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
             <span>About</span>
             <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
