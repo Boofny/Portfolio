@@ -22,9 +22,9 @@
 
 const jobs = [
   {
-    title: "Job title",
-    company: "Think of a new card",
-    dates: "Jan 2024 — Present",
+    title: "Coding Instructor",
+    company: "Code ninjas",
+    dates: "Aug 2025 — Present",
     bullets: [
       "Built and maintained internal REST APIs serving 40k+ daily requests using Go and PostgreSQL",
       "Reduced average API response time by 38% through query optimization and connection pooling",
@@ -40,10 +40,10 @@ function Experience() {
     <section className="flex flex-col gap-4">
       {jobs.map((job) => (
         <div key={job.company} className="border border-zinc-700 p-6 m-5 rounded">
-          <div className="flex justify-between items-start mb-4">
+          <div className="flex justify-between items-start mb-8">
             <div>
               <p className="font-medium text-white">{job.title}</p>
-              <p className="text-sm text-neutral-400">{job.company}</p>
+              <a href="https://www.codeninjas.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-OneMagenta hover:cursor-pointer">{job.company}</a>
             </div>
             <span className="text-xs text-neutral-500 whitespace-nowrap ml-4">{job.dates}</span>
           </div>
