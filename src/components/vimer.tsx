@@ -19,10 +19,10 @@ function wordWrap(text: string, maxWidth: number): string[] {
 }
 
 const buffer: string[] = [
+  "",
   ...wordWrap(AboutMe, 50), // only change
   "",
-  "",
-  "##NOTE: use hjkl to move around!",
+  "//NOTE: use hjkl to move around!",
   "",
   "",
 ];

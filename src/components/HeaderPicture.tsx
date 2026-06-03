@@ -11,7 +11,7 @@ function HeaderPicture() {
       </div>
 
       {/* Social links */}
-      <div className="w-full flex justify-center items-center gap-x-5 py-4">
+      <div className="w-full flex justify-center items-center gap-x-5 py-4 md:flex hidden">
         <div className="w-10 h-10 flex justify-center items-center">
           <a href="https://github.com/Boofny" target="_blank" rel="noopener noreferrer">
             <button className="cursor-pointer">
@@ -29,7 +29,7 @@ function HeaderPicture() {
       </div>
 
       {/* School entries */}
-      <div className="flex flex-col gap-2 ">
+      <div className="flex flex-col gap-2 md:flex hidden">
         <div className="w-80 flex items-center gap-2 md:w-full">
           <div className="w-16 shrink-0 border-OneBlue border-2 rounded">
             <img className="w-full rounded" src={delcastlePic} alt="delcastle" />
