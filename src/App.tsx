@@ -1,5 +1,6 @@
 import Hompage from "./pages/Homepage.tsx"
 import Terminal from "./pages/Terminal.tsx"
+import Projects from "./pages/Projects.tsx"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/homepage" element={<Hompage/>} />
+          <Route path="/homepage/projects" element={<Projects/>} />
           <Route path="/term" element={<Terminal/>} />
           <Route path="*" element={<Navigate to="/homepage" replace />} />
         </Routes>
