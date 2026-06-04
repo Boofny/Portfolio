@@ -1,25 +1,3 @@
-// NOTE: trying out a small rewrite using the Card.tsx component
-// function Experience(){
-//   return(
-//     <div className="flex flex-col justify-center items-center">
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//       <p className="text-white">Stock Experience hllo wodwdopihwoih</p>
-//     </div>
-//   )
-// }
-//
-// export default Experience;
-
 const jobs = [
   {
     title: "Coding Instructor",
@@ -43,7 +21,7 @@ function Experience() {
           <div className="flex justify-between items-start mb-8">
             <div>
               <p className="font-medium text-white">{job.title}</p>
-              <a href="https://www.codeninjas.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-OneMagenta hover:cursor-pointer">{job.company}</a>
+              <a href="https://www.codeninjas.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-OneCyan hover:cursor-pointer">{job.company}</a>
             </div>
             <span className="text-xs text-neutral-500 whitespace-nowrap ml-4">{job.dates}</span>
           </div>

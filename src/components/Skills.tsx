@@ -65,7 +65,7 @@ const skills: Skill[] = [
       hover:border-blue-600
       hover:bg-blue-600/5
     `,
-    link: "https://www.java.com/en/"
+    link: "https://www.docker.com/"
   },
   {
     name: "React",
