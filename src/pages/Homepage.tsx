@@ -29,7 +29,7 @@ function Homepage() {
 
         {/* Section 3*/}
         {/* md:flex-col in order to change the layout for exp and skills and changing each width */}
-      <div className="flex flex-col md:flex-row items-stretch md:px-25 2xl:px-70 pt-7 md:pb-24" id="skills">
+      <div className="flex flex-col md:flex-col items-stretch md:px-25 2xl:px-70 pt-7 md:pb-24" id="skills">
         <div className="w-full">
           <Skills/>
         </div>
