@@ -64,10 +64,10 @@ const SkillScanTech: CompCardFooter[] = [
 
 const goliveSpecs: string[] = [
   "Custom router",
-  "Group routing",
-  "Middleware handling",
-  "Custom Logging",
-  "CORS handling"
+  "Route grouping",
+  "Middleware system",
+  "Structured logging",
+  "CORS support",
 ]
 
 const SkilScanSpecs: string[] = [
