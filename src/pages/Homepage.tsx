@@ -28,7 +28,7 @@ function Homepage() {
       </div>
 
         {/* Section 3*/}
-      <div className="flex flex-col md:flex-row items-stretch md:px-25 2xl:px-70 pt-7 md:pb-24" id="skills">
+      <div className="flex flex-row md:flex-col items-stretch md:px-25 2xl:px-70 pt-7 md:pb-24" id="skills">
         <Skills/>
         <Card title="[4]Experience" mobileTitle="[3]Experience">
           {/* thinking of getting rid of this in place of having something like a contact me or  */}
