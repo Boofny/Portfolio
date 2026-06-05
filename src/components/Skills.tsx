@@ -316,7 +316,7 @@ const skillCategories: SkillCategory[] = [
 
 function Skills() {
   return (
-    <div className="w-full pb-10 flex justify-center items-center pt-10 md:pt-20">
+    <div className="w-full pb-25 flex justify-center items-center pt-10 md:pt-20 md:px-40">
       <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded mx-10 w-full">
         <legend className="md:block hidden ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
           [3]Skills
@@ -331,8 +331,8 @@ function Skills() {
               key={category.title} 
               className="flex flex-col md:flex-row py-4 first:pt-0 last:pb-0 gap-2 md:gap-0"
             >
-              <div className="w-full md:w-36 shrink-0 text-zinc-500 font-hack text-sm">
-                {category.title}
+              <div className="w-full md:w-36 shrink-0 text-zinc-400 font-hack text-sm">
+                {category.title}:
               </div>
               <div className="flex-1 flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
@@ -350,18 +350,18 @@ function Skills() {
                       ${skill.hoverClass}
                     `}
                   >
-                    <span className="text-xl">{skill.icon}</span>
-                    <span className="font-hack text-sm">{skill.name}</span>
+                    <span className="md:text-3xl text-xl">{skill.icon}</span>
+                    <span className="font-hack md:text-base">{skill.name}</span>
 
                     {/* Hover tooltip with description */}
                     <span className="
                       absolute left-0 top-full mt-2 z-10
                       px-3 py-2 
-                      bg-zinc-900 border border-zinc-700 rounded
-                      text-xs text-zinc-400 font-hack
+                      bg-zinc-900 border-2 border-OneGreen rounded
+                      text-xs text-zinc-100 font-hack
                       opacity-0 group-hover:opacity-100
                       transition-opacity duration-150
-                      whitespace-nowrap
+                      md:whitespace-nowrap
                       pointer-events-none
                     ">
                       {skill.description}
