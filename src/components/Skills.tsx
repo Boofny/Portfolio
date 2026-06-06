@@ -209,10 +209,6 @@ import {
   SiSupabase,
 } from "react-icons/si"
 
-import {
-  GrMysql
-} from "react-icons/gr"
-
 type Skill = {
   name: string
   icon: ReactElement
@@ -268,13 +264,6 @@ const skillCategories: SkillCategory[] = [
         icon: <SiPostgresql />,
         description: "Database design, queries, optimization",
         link: "https://www.postgresql.org/",
-        hoverClass: "hover:text-blue-400 hover:border-blue-400 hover:bg-blue-400/5"
-      },
-      {
-        name: "Mysql",
-        icon: <GrMysql/>,
-        description: "General Database",
-        link: "https://www.mysql.com/",
         hoverClass: "hover:text-blue-400 hover:border-blue-400 hover:bg-blue-400/5"
       },
       {
