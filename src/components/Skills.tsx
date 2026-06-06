@@ -194,11 +194,14 @@ import {
   FaReact,
   FaGitAlt,
   FaLinux,
+  FaJava,
+  FaPython,
 } from "react-icons/fa"
 
 import {
   SiGnubash,
   SiGo,
+  SiTypescript,
   SiPostgresql,
   SiTailwindcss,
   SiNextdotjs,
@@ -231,6 +234,27 @@ const skillCategories: SkillCategory[] = [
         description: "REST APIs, CLI tools, microservices",
         link: "https://go.dev/",
         hoverClass: "hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/5"
+      },
+      {
+        name: "Java",
+        icon: <FaJava/>,
+        description: "REST APIs, Crud Apps",
+        link: "https://java.com/en",
+        hoverClass: "hover:text-red-400 hover:border-red-500 hover:bg-red-500/5"
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript/>,
+        description: "Frontend and API",
+        link: "https://www.typescriptlang.org/",
+        hoverClass: "hover:text-blue-500 hover:border-blue-500 hover:bg-blue-500/5"
+      },
+      {
+        name: "Python",
+        icon: <FaPython/>,
+        description: "Computer vision and Scripting",
+        link: "https://www.python.org/",
+        hoverClass: "hover:text-yellow-500 hover:border-yellow-500 hover:bg-yellow-500/5"
       },
     ]
   },
@@ -314,9 +338,75 @@ const skillCategories: SkillCategory[] = [
   },
 ]
 
+// function Skills() {
+//   return (
+//     <div className="w-full pb-25 flex justify-center items-center pt-10 md:pt-20 md:px-40">
+//       <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded mx-10 w-full">
+//         <legend className="md:block hidden ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
+//           [3]Skills
+//         </legend>
+//         <legend className="md:hidden block ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
+//           [2]Skills
+//         </legend>
+//
+//         <div className="p-4 md:p-6 divide-y divide-zinc-800">
+//           {skillCategories.map((category) => (
+//             <div 
+//               key={category.title} 
+//               className="flex flex-col md:flex-row py-4 first:pt-0 last:pb-0 gap-2 md:gap-0"
+//             >
+//               <div className="w-full md:w-36 shrink-0 text-zinc-400 font-hack text-sm">
+//                 {category.title}:
+//               </div>
+//               <div className="flex-1 flex flex-wrap gap-3">
+//                 {category.skills.map((skill) => (
+//                   <a
+//                     key={skill.name}
+//                     href={skill.link}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className={`
+//                       group relative flex items-center gap-2 
+//                       px-3 py-2 
+//                       bg-zinc-900 border border-zinc-700 rounded
+//                       text-white 
+//                       transition-all duration-150
+//                       ${skill.hoverClass}
+//                     `}
+//                   >
+//                     <span className="md:text-3xl text-xl">{skill.icon}</span>
+//                     <span className="font-hack md:text-base">{skill.name}</span>
+//
+//                     {/* Hover tooltip with description */}
+//                     <span className="
+//                       absolute left-0 top-full mt-2 z-10
+//                       px-3 py-2 
+//                       bg-zinc-900 border-2 border-OneGreen rounded
+//                       text-xs text-zinc-100 font-hack
+//                       opacity-0 group-hover:opacity-100
+//                       transition-opacity duration-150
+//                       md:whitespace-nowrap
+//                       pointer-events-none
+//                     ">
+//                       {skill.description}
+//                     </span>
+//                   </a>
+//                 ))}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </fieldset>
+//     </div>
+//   )
+// }
+//
+// export default Skills
+//
+
 function Skills() {
   return (
-    <div className="w-full pb-25 flex justify-center items-center pt-10 md:pt-20 md:px-40">
+    <div className="w-full pb-25 flex justify-center items-center pt-10 md:pt-20 md:px-20">
       <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded mx-10 w-full">
         <legend className="md:block hidden ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
           [3]Skills
@@ -325,38 +415,33 @@ function Skills() {
           [2]Skills
         </legend>
 
-        <div className="p-4 md:p-6 divide-y divide-zinc-800">
+        <div className="p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-y-5">
           {skillCategories.map((category) => (
-            <div 
-              key={category.title} 
-              className="flex flex-col md:flex-row py-4 first:pt-0 last:pb-0 gap-2 md:gap-0"
-            >
-              <div className="w-full md:w-36 shrink-0 text-zinc-400 font-hack text-sm">
-                {category.title}:
+            <div key={category.title}>
+              <div className="text-zinc-400 font-hack md:text-sm text-xs uppercase tracking-widest mb-5 md:mt-5 mt-3 pb-2 border-b border-zinc-700">
+                {category.title}
               </div>
-              <div className="flex-1 flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-4 md:gap-y-4">
                 {category.skills.map((skill) => (
-                  <a
+                    <a                  
                     key={skill.name}
                     href={skill.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`
-                      group relative flex items-center gap-2 
-                      px-3 py-2 
+                      group relative flex items-center gap-1.5
+                      px-2.5 py-1
                       bg-zinc-900 border border-zinc-700 rounded
-                      text-white 
+                      text-zinc-300 text-xs font-hack
                       transition-all duration-150
                       ${skill.hoverClass}
                     `}
                   >
-                    <span className="md:text-3xl text-xl">{skill.icon}</span>
-                    <span className="font-hack md:text-base">{skill.name}</span>
-
-                    {/* Hover tooltip with description */}
+                    <span className="md:text-3xl text-xl md:p-2">{skill.icon}</span>
+                    <span className="font-hack md:text-base font-semibold">{skill.name}</span>
                     <span className="
                       absolute left-0 top-full mt-2 z-10
-                      px-3 py-2 
+                      px-3 py-2
                       bg-zinc-900 border-2 border-OneGreen rounded
                       text-xs text-zinc-100 font-hack
                       opacity-0 group-hover:opacity-100
