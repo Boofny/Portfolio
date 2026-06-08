@@ -33,7 +33,7 @@ function Homepage() {
         <div className="w-full">
           <Skills/>
         </div>
-        <Card title="[4]Experience" mobileTitle="[3]Experience">
+        <Card title="[4]Experience" mobileTitle="[3]Experience" xPadding={"px-20"}>
           {/* thinking of getting rid of this in place of having something like a contact me or  */}
           <Experience /> 
         </Card>

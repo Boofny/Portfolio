@@ -8,7 +8,7 @@ const jobs = [
       "Reduced average API response time by 38% through query optimization and connection pooling",
       "Led migration of legacy auth system to JWT-based auth across 3 services",
     ],
-    tags: ["Go", "PostgreSQL", "Docker", "gRPC"],
+    tags: ["TypeScript", "C#"],
   },
   // ...
 ];
