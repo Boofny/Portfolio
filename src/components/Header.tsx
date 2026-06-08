@@ -66,7 +66,7 @@ function Header() {
           <span>Skills</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>
         </button>
-        <button className="hover:text-OneRed hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-l border-OneGreen/30" onClick={() => scrollToSection("skills", -700)}>
+        <button className="hover:text-OneRed hover:cursor-pointer px-4 py-2 text-OneGreen font-hack group flex items-center relative border-l border-OneGreen/30" onClick={() => scrollToSection("skills", -600)}>
           <span className="w-0 overflow-hidden group-hover:w-4 duration-300 opacity-0 group-hover:opacity-100">&gt;</span>
           <span>Experience</span>
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-OneGreen group-hover:w-full duration-300"></span>

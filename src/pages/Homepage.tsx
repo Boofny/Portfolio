@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header.tsx"
 import HeaderPicture from "../components/HeaderPicture.tsx"
 import About from "../components/Abouts/About.tsx"
@@ -8,6 +9,12 @@ import Skills from "../components/Skills.tsx"
 import Card from "../components/Card.tsx"
 
 function Homepage() {
+  const navigate = useNavigate();
+
+  const ToContact = () =>{
+    navigate("/homepage/contact");
+  }
+
   return (
     <div className="m-0 flex flex-col">
       <Header></Header>
@@ -37,6 +44,9 @@ function Homepage() {
           {/* thinking of getting rid of this in place of having something like a contact me or  */}
           <Experience /> 
         </Card>
+        <div className="flex justify-center items-center pb-20">
+          <button className="md:w-1/5 p-3 text-OneYellow bg-OneLightGray hover:bg-OneGreen hover:text-black font-bold font-hack rounded border-2 border-OneGreen md:text-xl" onClick={ToContact}>Contact Me.</button>
+        </div>
       </div>
     </div>
   )
