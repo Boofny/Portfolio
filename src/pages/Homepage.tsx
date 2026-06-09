@@ -44,8 +44,8 @@ function Homepage() {
           {/* thinking of getting rid of this in place of having something like a contact me or  */}
           <Experience /> 
         </Card>
-        <div className="flex justify-center items-center pb-20">
-          <button className="md:w-1/5 p-3 text-OneYellow bg-OneLightGray hover:bg-OneGreen hover:text-black font-bold font-hack rounded border-2 border-OneGreen md:text-xl" onClick={ToContact}>Contact Me.</button>
+        <div className="flex justify-center items-center pb-10">
+          <button className="md:w-1/5 p-3 text-OneYellow bg-OneLightGray hover:bg-OneGreen hover:text-black font-bold font-hack rounded border-3 border-OneGreen md:text-xl" onClick={ToContact}>Contact Me.</button>
         </div>
       </div>
     </div>
