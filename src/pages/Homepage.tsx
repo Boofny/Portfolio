@@ -15,6 +15,10 @@ function Homepage() {
     navigate("/homepage/contact");
   }
 
+  const ToProjectPage = () =>{
+    navigate("/homepage/projects");
+  }
+
   return (
     <div className="m-0 flex flex-col">
       <Header></Header>
@@ -33,6 +37,9 @@ function Homepage() {
       <div className="2xl:px-30 md:px-5" id="projects">
         <Projects />
       </div>
+      <div className="flex justify-center items-center md:w-11/16 px-10">
+        <button className="md:w-1/4 px-1.5 text-white bg-OneDarkGray hover:bg-OneGreen hover:text-black md:font-bold font-hack rounded border-3 border-OneGreen md:text-xl" onClick={ToProjectPage}>See More.</button>
+      </div>
 
         {/* Section 3*/}
         {/* md:flex-col in order to change the layout for exp and skills and changing each width */}
@@ -45,7 +52,7 @@ function Homepage() {
           <Experience /> 
         </Card>
         <div className="flex justify-center items-center pb-10">
-          <button className="md:w-1/5 p-3 text-OneYellow bg-OneLightGray hover:bg-OneGreen hover:text-black font-bold font-hack rounded border-3 border-OneGreen md:text-xl" onClick={ToContact}>Contact Me.</button>
+          <button className="md:w-1/5 p-3 text-white bg-OneDarkGray hover:bg-OneGreen hover:text-black font-bold font-hack rounded border-3 border-OneGreen md:text-xl" onClick={ToContact}>Contact Me.</button>
         </div>
       </div>
     </div>
