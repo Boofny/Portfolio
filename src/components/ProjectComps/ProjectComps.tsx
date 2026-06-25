@@ -27,21 +27,17 @@ const GoLiveTech: CompCardFooter[] = [
 
 const AsciiCam: CompCardFooter[] = [
   {
-    TechName: "Golang",
-    Icon: <SiGo className="text-3xl text-cyan-400"/>,
+    TechName: "Python",
+    Icon: <img className="ml-2.5 text-3xl md:w-6 md:h-6 w-5 h-5 object-cover md:ml-1.5 md:pr-0" src="https://www.svgrepo.com/show/452091/python.svg" alt="python" />,
   },
   {
     TechName: "Opencv",
     Icon: <img src="https://www.svgrepo.com/show/354139/opencv.svg" alt="opencv" className="md:w-7 md:h-7 w-6 h-6 object-cover md:pr-0 my-0"/>
   },
   {
-    TechName: "Python",
-    Icon: <img className="ml-2.5 text-3xl md:w-6 md:h-6 w-5 h-5 object-cover md:ml-1.5 md:pr-0 my-2" src="https://www.svgrepo.com/show/452091/python.svg" alt="python" />,
+    TechName: "Golang",
+    Icon: <SiGo className="text-3xl text-cyan-400"/>,
   },
-  // {
-  //   TechName: "Opencv",
-  //   Icon: <SiOpencv className="md:text-3xl text-red-400"/>,
-  // }
 ]
 
 const SkillScanTech: CompCardFooter[] = [
