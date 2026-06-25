@@ -5,16 +5,17 @@ import skillImage from "../../assets/SkillScanMob.png"
 
 const goliveImage = "https://neonxp.gallerycdn.vsassets.io/extensions/neonxp/gotools/0.1.5/1691451648679/Microsoft.VisualStudio.Services.Icons.Default"
 const goliveRepo = "https://github.com/Boofny/golive"
+const asciiCamImage = "https://admin.itsnicethat.com/images/VtnJNzUAflWHNadqzeaCAD006Lw=/269508/format-webp%7Cwidth-1440/fight_me_2._-_Copyright__enigmatriz_2025.jpg"
 
 import {
   FaReact,
-  FaGitAlt,
 } from "react-icons/fa"
 
 import {
   SiGo,
   SiTailwindcss,
   SiNextdotjs,
+  // SiOpencv,
 } from "react-icons/si"
 // this file is the actuall contnennt in [1] pojects
 const GoLiveTech: CompCardFooter[] = [
@@ -24,23 +25,23 @@ const GoLiveTech: CompCardFooter[] = [
   },
 ]
 
-const DNTECH: CompCardFooter[] = [
+const AsciiCam: CompCardFooter[] = [
   {
-    TechName: "DN",
-    Icon: <FaGitAlt/>,
+    TechName: "Golang",
+    Icon: <SiGo className="text-3xl text-cyan-400"/>,
   },
   {
-    TechName: "DN",
-    Icon: <FaGitAlt/>,
+    TechName: "Opencv",
+    Icon: <img src="https://www.svgrepo.com/show/354139/opencv.svg" alt="opencv" className="md:w-7 md:h-7 w-6 h-6 object-cover md:pr-0 my-0"/>
   },
   {
-    TechName: "DN",
-    Icon: <FaGitAlt/>,
+    TechName: "Python",
+    Icon: <img className="ml-2.5 text-3xl md:w-6 md:h-6 w-5 h-5 object-cover md:ml-1.5 md:pr-0 my-2" src="https://www.svgrepo.com/show/452091/python.svg" alt="python" />,
   },
-  {
-    TechName: "DN",
-    Icon: <FaGitAlt/>,
-  }
+  // {
+  //   TechName: "Opencv",
+  //   Icon: <SiOpencv className="md:text-3xl text-red-400"/>,
+  // }
 ]
 
 const SkillScanTech: CompCardFooter[] = [
@@ -88,7 +89,7 @@ const IDKSpecs: string[] = [
 export const CompStack = {
   golive: <CompCard 
   Specifications={goliveSpecs} 
-  Name="GoLive!" 
+  Name="GoLive" 
   Intro="Http Framework"
   Description={GoLiveDesc} 
   Image={goliveImage} 
@@ -101,14 +102,14 @@ export const CompStack = {
 
   asciiIt: <CompCard 
   Specifications={IDKSpecs} 
-  Name="DN" 
-  Intro="idk yet"
+  Name="Ascii Cam" 
+  Intro="Ascii Camera Engine"
   Description={DNYET} 
-  Image="DN"
+  Image={asciiCamImage}
   Links={{
-    GitHubLink: "http://github.com/Boofny", WebsiteLink: "https://github.com/Boofny"
+    GitHubLink: "https://github.com/Boofny/AsciiCamera.git", WebsiteLink: "https://github.com/Boofny",
   }}
-  TechUsed={DNTECH}/>,
+  TechUsed={AsciiCam}/>,
 
   skillscan: <CompCard 
   Specifications={SkilScanSpecs} 
