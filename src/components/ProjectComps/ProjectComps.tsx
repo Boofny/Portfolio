@@ -32,7 +32,7 @@ const AsciiCam: CompCardFooter[] = [
   },
   {
     TechName: "Opencv",
-    Icon: <img src="https://www.svgrepo.com/show/354139/opencv.svg" alt="opencv" className="md:w-7 md:h-7 w-6 h-6 object-cover md:pr-0 my-0"/>
+    Icon: <img src="https://icon.icepanel.io/Technology/svg/OpenCV.svg" alt="opencv" className="md:w-6 md:h-6 w-6 h-6 object-cover md:pr-0 my-0"/>
   },
   {
     TechName: "Golang",
