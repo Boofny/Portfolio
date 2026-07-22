@@ -2,8 +2,8 @@ import { GoLiveDesc, DNYET, SkillScanDesc}from "./ProjectConsts.ts"
 import { CompCard  }from "./Cards/CompCard.tsx"
 import {type CompCardFooter} from "./Cards/Types.ts"
 import skillImage from "../../assets/SkillScanMob.png"
+import goliveImage from "../../assets/GoLiveCode.png" // work fine for desktop but mobile is weird
 
-const goliveImage = "https://neonxp.gallerycdn.vsassets.io/extensions/neonxp/gotools/0.1.5/1691451648679/Microsoft.VisualStudio.Services.Icons.Default"
 const goliveRepo = "https://github.com/Boofny/golive"
 const asciiCamImage = "https://admin.itsnicethat.com/images/VtnJNzUAflWHNadqzeaCAD006Lw=/269508/format-webp%7Cwidth-1440/fight_me_2._-_Copyright__enigmatriz_2025.jpg"
 

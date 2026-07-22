@@ -11,6 +11,7 @@ import {
 import {
   SiGnubash,
   SiGo,
+  SiLua,
   SiTypescript,
   SiPostgresql,
   SiCplusplus, 
@@ -18,6 +19,7 @@ import {
   SiNextdotjs,
   SiAstro,
   SiSupabase,
+  SiNeovim,
 } from "react-icons/si"
 
 type Skill = {
@@ -64,6 +66,13 @@ const skillCategories: SkillCategory[] = [
         description: "Computer Vision and Scripting",
         link: "https://www.python.org/",
         hoverClass: "hover:text-yellow-500 hover:border-yellow-500 hover:bg-yellow-500/5"
+      },
+      {
+        name: "Lua",
+        icon: <SiLua/>,
+        description: "Neovim scripting and plugin development",
+        link: "https://www.lua.org/",
+        hoverClass: "hover:text-blue-500 hover:border-blue-500 hover:bg-blue-500/5"
       },
     ]
   },
@@ -149,6 +158,13 @@ const skillCategories: SkillCategory[] = [
         description: "Shell scripting, automation",
         link: "https://en.wikipedia.org/wiki/Bash_(Unix_shell)",
         hoverClass: "hover:text-green-400 hover:border-green-400 hover:bg-green-400/5"
+      },
+      {
+        name: "Neovim/Vim",
+        icon: <SiNeovim/>,
+        description: "Command line file editing",
+        link: "https://neovim.io/",
+        hoverClass: "hover:text-green-300 hover:border-green-300 hover:bg-green-300/5"
       },
     ]
   },
