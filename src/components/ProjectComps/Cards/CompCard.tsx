@@ -2,6 +2,7 @@ import { FaGithub, FaDocker} from "react-icons/fa"
 import { type CompCardFooter, type ProjectLinks} from "./Types.ts"
 import { IoIosLink } from "react-icons/io";
 
+// TODO: i would try changing the image component to being a react element because then it can be an image or another thing
 interface CompContent {
   Description: string
   TechUsed: CompCardFooter[]
