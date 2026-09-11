@@ -1,5 +1,11 @@
 # Portfolio TODO
 
+- [ ] 1. get email js setup and working 
+- [ ] 2. get second project inside of main branch 
+- [ ] 3. keep rg TODO to see what i have to do
+
+
+
 ## golive card 
 - [ ] adding a link to the live api 
 
@@ -8,7 +14,6 @@
 - [ ] restructure how skills is used to make it more moduler
 - [ ] Add a contant be section
 - [ ] maybe change the layout of skills and expeerience 
-
 
 ### some ideas
 - Code snippet image — first thing eyes go to on the card
