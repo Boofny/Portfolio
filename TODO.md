@@ -1,7 +1,7 @@
 # Portfolio TODO
 
 - [ ] 1. get email js setup and working 
-- [ ] 2. get second project inside of main branch 
+- [ ] 2. get second project inside of main branch the neovim plugin and include some more like hardware embedded projects
 - [ ] 3. keep rg TODO to see what i have to do
 
 
