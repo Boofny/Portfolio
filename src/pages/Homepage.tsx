@@ -36,6 +36,9 @@ function Homepage() {
         {/* Section 2*/}
       <div className="2xl:px-30 md:px-5" id="projects">
         <Projects />
+        {/* <div className="bg-OneGreen"> */}
+        {/*   <button className="flex justify-center items-center">More</button> */}
+        {/* </div> */}
       </div>
       {/* <div className="flex justify-center items-center md:w-11/16 px-10"> */}
       {/*   <button className="md:w-1/4 px-1.5 text-white bg-OneDarkGray hover:bg-OneGreen hover:text-black md:font-bold font-hack rounded border-3 border-OneGreen md:text-xl" onClick={ToProjectPage}>See More.</button> */}

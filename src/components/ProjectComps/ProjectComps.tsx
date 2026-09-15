@@ -1,11 +1,12 @@
-import { GoLiveDesc, DNYET, SkillScanDesc}from "./ProjectConsts.ts"
+import { GoLiveDesc, SkillScanDesc, TeleportDesc}from "./ProjectConsts.ts"
 import { CompCard  }from "./Cards/CompCard.tsx"
 import {type CompCardFooter} from "./Cards/Types.ts"
 import skillImage from "../../assets/SkillScanMob.png"
 import goliveImage from "../../assets/GoLiveCode.png" // work fine for desktop but mobile is weird
+import teleportImage from "../../assets/Teleport.png"
 
 const goliveRepo = "https://github.com/Boofny/golive"
-const asciiCamImage = "https://admin.itsnicethat.com/images/VtnJNzUAflWHNadqzeaCAD006Lw=/269508/format-webp%7Cwidth-1440/fight_me_2._-_Copyright__enigmatriz_2025.jpg"
+// const asciiCamImage = "https://admin.itsnicethat.com/images/VtnJNzUAflWHNadqzeaCAD006Lw=/269508/format-webp%7Cwidth-1440/fight_me_2._-_Copyright__enigmatriz_2025.jpg"
 
 import {
   FaReact,
@@ -15,8 +16,10 @@ import {
   SiGo,
   SiTailwindcss,
   SiNextdotjs,
-  // SiOpencv,
+  SiLua,
+  SiNeovim,
 } from "react-icons/si"
+
 // this file is the actuall contnennt in [1] pojects
 const GoLiveTech: CompCardFooter[] = [
   {
@@ -25,18 +28,14 @@ const GoLiveTech: CompCardFooter[] = [
   },
 ]
 
-const AsciiCam: CompCardFooter[] = [
+const TeleportTech: CompCardFooter[] = [
   {
-    TechName: "Python",
-    Icon: <img className="ml-2.5 text-3xl md:w-6 md:h-6 w-5 h-5 object-cover md:ml-1.5 md:pr-0" src="https://www.svgrepo.com/show/452091/python.svg" alt="python" />,
+    TechName: "Lua",
+    Icon: <SiLua className="text-blue-500"/>,
   },
   {
-    TechName: "Opencv",
-    Icon: <img src="https://icon.icepanel.io/Technology/svg/OpenCV.svg" alt="opencv" className="md:w-6 md:h-6 w-6 h-6 object-cover md:pr-0 my-0"/>
-  },
-  {
-    TechName: "Golang",
-    Icon: <SiGo className="text-3xl text-cyan-400"/>,
+    TechName: "Neovim",
+    Icon: <SiNeovim className="text-green-300"/>,
   },
 ]
 
@@ -75,11 +74,12 @@ const SkilScanSpecs: string[] = [
   "Candidate feedback",
 ]
 
-const IDKSpecs: string[] = [
-  "placeholder",
-  "placeholder",
-  "placeholder",
-  "placeholder",
+const TeleportSpecs: string[] = [
+  "Per project configuration",
+  "Fast file/buffer navigation",
+  "Marks outlive project session",
+  "Simple file mark management",
+  "Automated keymaps per file",
 ]
 
 export const CompStack = {
@@ -96,16 +96,16 @@ export const CompStack = {
   } 
   TechUsed={GoLiveTech}/>,
 
-  asciiIt: <CompCard 
-  Specifications={IDKSpecs} 
-  Name="Ascii Cam" 
-  Intro="Ascii Camera Engine"
-  Description={DNYET} 
-  Image={asciiCamImage}
+  teleport: <CompCard 
+  Specifications={TeleportSpecs} 
+  Name="Teleport Neovim" 
+  Intro="Neovim Plugin"
+  Description={TeleportDesc} 
+  Image={teleportImage}
   Links={{
-    GitHubLink: "https://github.com/Boofny/AsciiCamera.git", WebsiteLink: "https://github.com/Boofny",
+    GitHubLink: "https://github.com/Boofny/teleport.nvim",
   }}
-  TechUsed={AsciiCam}/>,
+  TechUsed={TeleportTech}/>,
 
   skillscan: <CompCard 
   Specifications={SkilScanSpecs} 

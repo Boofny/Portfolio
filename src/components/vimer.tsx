@@ -22,7 +22,7 @@ const buffer: string[] = [
   "",
   ...wordWrap(AboutMe, 50), // only change
   "",
-  "NOTE: use hjkl to move around!",
+  "## NOTE use hjkl to move around!",
   "",
   "",
 ];
@@ -126,7 +126,7 @@ export default function Vimer() {
       <div className="h-5 bg-[#2c323c] flex items-center relative">
         <span className="h-full font-bold text-black bg-OneGreen px-3 flex items-center justify-center">NORMAL</span>
         <div className="flex justify-end items-center w-0 h-0 border-l-OneGreen border-10 border-r-0 border-y-transparent"></div>
-        <p className="text-gray-400 h-full font-semibold px-3 flex items-center justify-center">AboutMe.txt</p>
+        <p className="text-gray-400 h-full font-semibold px-3 flex items-center justify-center">AboutMe.md</p>
 
         <div className="h-full flex justify-center items-center right-0 absolute">
           <div className="flex justify-end items-center w-0 h-0 border-r-OneGreen border-10 border-l-0 border-y-transparent"></div>

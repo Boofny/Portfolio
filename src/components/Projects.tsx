@@ -3,10 +3,10 @@ import {CompStack} from "./ProjectComps/ProjectComps.tsx"
 import {Stacks} from "./ProjectComps/ProjectStack.tsx"
 
 //TODO: need to make the code here more moduler and find some alternatives if needed
-type Tab = "golive" | "asciiIt" | "skillscan" 
+type Tab = "golive" | "teleport" | "skillscan" 
 
 function Projects() {
-  const tabs: Tab[] = [ "golive", "asciiIt", "skillscan"]
+  const tabs: Tab[] = [ "golive", "teleport", "skillscan"]
   const [activeTab, setActiveTab] = useState<Tab>("golive")
 
   const handleClickOption = (tab: Tab) => setActiveTab(tab)
@@ -54,7 +54,7 @@ function Projects() {
                   <span>
                     {{
                       golive: "GoLive",
-                      asciiIt: "Ascii Cam",
+                      teleport: "Teleport Nvim",
                       skillscan: "Skill Scan",
                     }[tab]}
                   </span>
