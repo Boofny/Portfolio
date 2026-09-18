@@ -103,7 +103,7 @@ export const CompStack = {
   Description={TeleportDesc} 
   Image={teleportImage}
   Links={{
-    GitHubLink: "https://github.com/Boofny/teleport.nvim",
+    GitHubLink: "https://github.com/Boofny/teleport.nvim", WebsiteLink: "https://youtu.be/c4OyfL5o7DU"
   }}
   TechUsed={TeleportTech}/>,
 

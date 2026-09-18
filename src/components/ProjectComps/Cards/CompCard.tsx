@@ -21,7 +21,7 @@ export function CompCard(content: CompContent) {
       <div className="w-full flex-1 flex flex-col md:flex-row min-h-0">
 
         {/* Image */}
-        <div className="w-full md:flex-1 h-48 md:h-85 overflow-hidden shrink-0 p-0">
+        <div className="w-full md:flex-1 h-48 md:h-85 overflow-hidden shrink-0 p-0"> // TODO: fix this for mobile aswell
           <img
             className="
               w-full
