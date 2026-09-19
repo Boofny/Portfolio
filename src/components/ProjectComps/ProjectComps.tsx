@@ -94,6 +94,7 @@ export const CompStack = {
       Docker: "https://github.com/Boofny/PortfolioApi/blob/main/docs/DOCKER.md",  // goiing to add a readme file to the example in golive with the docker file and will have a one liner docker for the image on docker hub
       WebsiteLink: "https://railway.com"} // for now its just my github before i get the api up and running not website but live api 
   } 
+  ImageCovers="object-top-left"
   TechUsed={GoLiveTech}/>,
 
   teleport: <CompCard 
@@ -105,6 +106,8 @@ export const CompStack = {
   Links={{
     GitHubLink: "https://github.com/Boofny/teleport.nvim", WebsiteLink: "https://youtu.be/c4OyfL5o7DU"
   }}
+
+  ImageCovers="object-center"
   TechUsed={TeleportTech}/>,
 
   skillscan: <CompCard 
@@ -116,6 +119,7 @@ export const CompStack = {
   Links={{
     GitHubLink: "https://github.com/Boofny/SkillScan", WebsiteLink: "https://skill-scan-six.vercel.app/"
   }}
+  ImageCovers="object-center"
   TechUsed={SkillScanTech}/>,
   // slime: <CompCard Description="slimer" TechUsed="tech used" Image="skillscan" Repo="http://github.com/Boofny"/>,
 }

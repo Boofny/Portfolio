@@ -10,6 +10,7 @@ interface CompContent {
   Name: string
   Intro: string
   Links: ProjectLinks
+  ImageCovers: string
   Specifications: string[],
 }
 
@@ -22,18 +23,17 @@ export function CompCard(content: CompContent) {
 
         {/* Image */}
         <div className="w-full md:flex-1 h-48 md:h-85 overflow-hidden shrink-0 p-0"> 
-        {/*TODO: fix this for mobile aswell */}
           <img
-            className="
+            className={`
               w-full
               h-full
               object-cover
-              object-center
               opacity-80
               hover:opacity-100
               transition-opacity
               duration-300
-            "
+              ${content.ImageCovers}
+            `}
             src={content.Image}
             alt={content.Name}
           />
