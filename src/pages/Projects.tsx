@@ -11,7 +11,7 @@ function Projects(){
 
   return (
     <div>
-      <button onClick={BackToHome} className="font-bold hover:cursor-pointer">HOME</button>
+      <button onClick={BackToHome} className="text-white font-bold hover:cursor-pointer">HOME</button>
     </div>
   )
 }

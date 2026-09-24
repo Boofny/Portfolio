@@ -7,6 +7,7 @@ import Projects from "../components/Projects.tsx"
 import Experience from "../components/Experience.tsx"
 import Skills from "../components/Skills.tsx"
 import Card from "../components/Card.tsx"
+import BracketButton from "../components/BracketButton.tsx"
 
 function Homepage() {
   const navigate = useNavigate();
@@ -15,9 +16,9 @@ function Homepage() {
     navigate("/homepage/contact");
   }
 
-  // const ToProjectPage = () =>{
-  //   navigate("/homepage/projects");
-  // }
+  const ToProjectPage = () =>{
+    navigate("/homepage/projects");
+  }
 
   return (
     <div className="m-0 flex flex-col">
@@ -36,6 +37,14 @@ function Homepage() {
         {/* Section 2*/}
       <div className="2xl:px-30 md:px-5" id="projects">
         <Projects />
+
+        {/* Most recent change for there in lines 41 and 70 */}
+        <div className="md:mx-[40%] md:pt-15 flex items-center justify-center">
+          <BracketButton onClick={ToProjectPage} className="p-3 text-white md:px-5 bg-OneDarkGray font-bold font-hack rounded border-3 border-OneGreen md:text-xl" >
+            More Projects 
+          </BracketButton>
+        </div>
+
         {/* <div className="bg-OneGreen"> */}
         {/*   <button className="flex justify-center items-center">More</button> */}
         {/* </div> */}
@@ -55,7 +64,11 @@ function Homepage() {
           <Experience /> 
         </Card>
         <div className="flex justify-center items-center pb-10">
-          <button className="md:w-1/5 p-3 text-white bg-OneDarkGray hover:bg-OneGreen hover:text-black font-bold font-hack rounded border-3 border-OneGreen md:text-xl" onClick={ToContact}>Contact Me.</button>
+          {/* <button className="md:w-1/5 p-3 text-white bg-OneDarkGray hover:bg-OneGreen hover:text-black font-bold font-hack rounded border-3 border-OneGreen md:text-xl" onClick={ToContact}>Contact Me.</button> */}
+
+          <BracketButton onClick={ToContact} className="md:w-1/5 p-3 text-white bg-OneDarkGray font-bold font-hack rounded border-3 border-OneGreen md:text-xl" >
+            Contact Me.
+          </BracketButton>
         </div>
       </div>
     </div>
