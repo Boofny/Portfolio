@@ -2,7 +2,6 @@ import {useState} from "react"
 import {CompStack} from "./ProjectComps/ProjectComps.tsx"
 import {Stacks} from "./ProjectComps/ProjectStack.tsx"
 
-//TODO: need to make the code here more moduler and find some alternatives if needed
 type Tab = "golive" | "teleport" | "skillscan" 
 
 function Projects() {
@@ -16,7 +15,13 @@ function Projects() {
 
   return (
     <div className="w-full 2xl:w-15/16 2xl:pl-50 box-border flex flex-col md:flex-row justify-center items-stretch px-4 md:px-25 md:pt-20 gap-6 md:gap-20 py-6 md:overflow-hidden">
-      <div className="w-full flex justify-center items-center">
+      <div className="border border-red-600 w-full flex flex-col justify-center items-center">
+
+        {/* have to make this be appart of the projects component but not effect padding or spacing*/}
+        {/* <div className="text-white"> */}
+        {/*   tab here for projects */}
+        {/* </div> */}
+
         <fieldset className="bg-OneDarkGray border-3 border-OneGreen rounded h-full w-full md:w-full">
           <legend className="ml-4 md:ml-10 text-OneYellow font-hack text-lg font-bold tracking-widest">
             [1]Projects
