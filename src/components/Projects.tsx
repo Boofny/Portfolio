@@ -15,7 +15,8 @@ function Projects() {
 
   return (
     <div className="w-full 2xl:w-15/16 2xl:pl-50 box-border flex flex-col md:flex-row justify-center items-stretch px-4 md:px-25 md:pt-20 gap-6 md:gap-20 py-6 md:overflow-hidden">
-      <div className="border border-red-600 w-full flex flex-col justify-center items-center">
+    {/* bello div is the one that should contain the red border for the more projects button */}
+      <div className="w-full flex flex-col justify-center items-center">
 
         {/* have to make this be appart of the projects component but not effect padding or spacing*/}
         {/* <div className="text-white"> */}
